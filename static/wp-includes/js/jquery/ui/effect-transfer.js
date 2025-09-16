@@ -1,43 +1,43 @@
 /*!
  * jQuery UI Effects Transfer 1.13.3
- * http://jqueryui.com
+ * https://jqueryui.com
  *
  * Copyright OpenJS Foundation and other contributors
  * Released under the MIT license.
- * http://jquery.org/license
+ * https://jquery.org/license
  */
 
 //>>label: Transfer Effect
 //>>group: Effects
 //>>description: Displays a transfer effect from one element to another.
-//>>docs: http://api.jqueryui.com/transfer-effect/
-//>>demos: http://jqueryui.com/effect/
+//>>docs: https://api.jqueryui.com/transfer-effect/
+//>>demos: https://jqueryui.com/effect/
 
-(function (factory) {
+( function( factory ) {
 	"use strict";
 
-	if (typeof define === "function" && define.amd) {
+	if ( typeof define === "function" && define.amd ) {
 
 		// AMD. Register as an anonymous module.
-		define([
+		define( [
 			"jquery",
 			"../version",
 			"../effect"
-		], factory);
+		], factory );
 	} else {
 
 		// Browser globals
-		factory(jQuery);
+		factory( jQuery );
 	}
-})(function ($) {
-	"use strict";
+} )( function( $ ) {
+"use strict";
 
-	var effect;
-	if ($.uiBackCompat !== false) {
-		effect = $.effects.define("transfer", function (options, done) {
-			$(this).transfer(options, done);
-		});
-	}
-	return effect;
+var effect;
+if ( $.uiBackCompat !== false ) {
+	effect = $.effects.define( "transfer", function( options, done ) {
+		$( this ).transfer( options, done );
+	} );
+}
+return effect;
 
-});
+} );

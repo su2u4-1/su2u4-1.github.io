@@ -4,10 +4,10 @@
  * Made by Constance Chen
  * Released under the ISC license
  *
- * http://github.com/constancecchen/object-fit-polyfill
+ * https://github.com/constancecchen/object-fit-polyfill
  *--------------------------------------*/
 
-(function () {
+(function() {
   'use strict';
 
   // if the page is being rendered on the server, don't continue
@@ -23,7 +23,7 @@
   // If the browser does support object-fit, we don't need to continue
   var hasSupport = 'objectFit' in document.documentElement.style !== false;
   if (hasSupport && !edgePartialSupport) {
-    window.objectFitPolyfill = function () {
+    window.objectFitPolyfill = function() {
       return false;
     };
     return;
@@ -35,7 +35,7 @@
    *
    * @param {node} $container - parent element
    */
-  var checkParentContainer = function ($container) {
+  var checkParentContainer = function($container) {
     var styles = window.getComputedStyle($container, null);
     var position = styles.getPropertyValue('position');
     var overflow = styles.getPropertyValue('overflow');
@@ -68,7 +68,7 @@
    *
    * @param {node} $media - img/video element
    */
-  var checkMediaProperties = function ($media) {
+  var checkMediaProperties = function($media) {
     var styles = window.getComputedStyle($media, null);
     var constraints = {
       'max-width': 'none',
@@ -101,7 +101,7 @@
    * @param {node} $media - img or video element
    * @param {string} objectPosition - e.g. "50% 50%", "top left"
    */
-  var setPosition = function (axis, $media, objectPosition) {
+  var setPosition = function(axis, $media, objectPosition) {
     var position, other, start, end, side;
     objectPosition = objectPosition.split(' ');
 
@@ -168,7 +168,7 @@
    *
    * @param {node} $media - img/video/picture element
    */
-  var objectFit = function ($media) {
+  var objectFit = function($media) {
     // IE 10- data polyfill
     var fit = $media.dataset
       ? $media.dataset.objectFit
@@ -244,7 +244,7 @@
    *
    * @param {node} media - Optional specific DOM node(s) to be polyfilled
    */
-  var objectFitPolyfill = function (media) {
+  var objectFitPolyfill = function(media) {
     if (typeof media === 'undefined' || media instanceof Event) {
       // If left blank, or a default event, all media on the page will be polyfilled.
       media = document.querySelectorAll('[data-object-fit]');
@@ -270,7 +270,7 @@
         if (media[i].complete) {
           objectFit(media[i]);
         } else {
-          media[i].addEventListener('load', function () {
+          media[i].addEventListener('load', function() {
             objectFit(this);
           });
         }
@@ -278,7 +278,7 @@
         if (media[i].readyState > 0) {
           objectFit(media[i]);
         } else {
-          media[i].addEventListener('loadedmetadata', function () {
+          media[i].addEventListener('loadedmetadata', function() {
             objectFit(this);
           });
         }

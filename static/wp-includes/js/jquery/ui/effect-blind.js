@@ -1,73 +1,73 @@
 /*!
  * jQuery UI Effects Blind 1.13.3
- * http://jqueryui.com
+ * https://jqueryui.com
  *
  * Copyright OpenJS Foundation and other contributors
  * Released under the MIT license.
- * http://jquery.org/license
+ * https://jquery.org/license
  */
 
 //>>label: Blind Effect
 //>>group: Effects
 //>>description: Blinds the element.
-//>>docs: http://api.jqueryui.com/blind-effect/
-//>>demos: http://jqueryui.com/effect/
+//>>docs: https://api.jqueryui.com/blind-effect/
+//>>demos: https://jqueryui.com/effect/
 
-(function (factory) {
+( function( factory ) {
 	"use strict";
 
-	if (typeof define === "function" && define.amd) {
+	if ( typeof define === "function" && define.amd ) {
 
 		// AMD. Register as an anonymous module.
-		define([
+		define( [
 			"jquery",
 			"../version",
 			"../effect"
-		], factory);
+		], factory );
 	} else {
 
 		// Browser globals
-		factory(jQuery);
+		factory( jQuery );
 	}
-})(function ($) {
-	"use strict";
+} )( function( $ ) {
+"use strict";
 
-	return $.effects.define("blind", "hide", function (options, done) {
-		var map = {
-			up: ["bottom", "top"],
-			vertical: ["bottom", "top"],
-			down: ["top", "bottom"],
-			left: ["right", "left"],
-			horizontal: ["right", "left"],
-			right: ["left", "right"]
+return $.effects.define( "blind", "hide", function( options, done ) {
+	var map = {
+			up: [ "bottom", "top" ],
+			vertical: [ "bottom", "top" ],
+			down: [ "top", "bottom" ],
+			left: [ "right", "left" ],
+			horizontal: [ "right", "left" ],
+			right: [ "left", "right" ]
 		},
-			element = $(this),
-			direction = options.direction || "up",
-			start = element.cssClip(),
-			animate = { clip: $.extend({}, start) },
-			placeholder = $.effects.createPlaceholder(element);
+		element = $( this ),
+		direction = options.direction || "up",
+		start = element.cssClip(),
+		animate = { clip: $.extend( {}, start ) },
+		placeholder = $.effects.createPlaceholder( element );
 
-		animate.clip[map[direction][0]] = animate.clip[map[direction][1]];
+	animate.clip[ map[ direction ][ 0 ] ] = animate.clip[ map[ direction ][ 1 ] ];
 
-		if (options.mode === "show") {
-			element.cssClip(animate.clip);
-			if (placeholder) {
-				placeholder.css($.effects.clipToBox(animate));
-			}
-
-			animate.clip = start;
+	if ( options.mode === "show" ) {
+		element.cssClip( animate.clip );
+		if ( placeholder ) {
+			placeholder.css( $.effects.clipToBox( animate ) );
 		}
 
-		if (placeholder) {
-			placeholder.animate($.effects.clipToBox(animate), options.duration, options.easing);
-		}
+		animate.clip = start;
+	}
 
-		element.animate(animate, {
-			queue: false,
-			duration: options.duration,
-			easing: options.easing,
-			complete: done
-		});
-	});
+	if ( placeholder ) {
+		placeholder.animate( $.effects.clipToBox( animate ), options.duration, options.easing );
+	}
 
-});
+	element.animate( animate, {
+		queue: false,
+		duration: options.duration,
+		easing: options.easing,
+		complete: done
+	} );
+} );
+
+} );

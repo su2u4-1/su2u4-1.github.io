@@ -1,50 +1,50 @@
 /*!
  * jQuery UI Effects Fade 1.13.3
- * http://jqueryui.com
+ * https://jqueryui.com
  *
  * Copyright OpenJS Foundation and other contributors
  * Released under the MIT license.
- * http://jquery.org/license
+ * https://jquery.org/license
  */
 
 //>>label: Fade Effect
 //>>group: Effects
 //>>description: Fades the element.
-//>>docs: http://api.jqueryui.com/fade-effect/
-//>>demos: http://jqueryui.com/effect/
+//>>docs: https://api.jqueryui.com/fade-effect/
+//>>demos: https://jqueryui.com/effect/
 
-(function (factory) {
+( function( factory ) {
 	"use strict";
 
-	if (typeof define === "function" && define.amd) {
+	if ( typeof define === "function" && define.amd ) {
 
 		// AMD. Register as an anonymous module.
-		define([
+		define( [
 			"jquery",
 			"../version",
 			"../effect"
-		], factory);
+		], factory );
 	} else {
 
 		// Browser globals
-		factory(jQuery);
+		factory( jQuery );
 	}
-})(function ($) {
-	"use strict";
+} )( function( $ ) {
+"use strict";
 
-	return $.effects.define("fade", "toggle", function (options, done) {
-		var show = options.mode === "show";
+return $.effects.define( "fade", "toggle", function( options, done ) {
+	var show = options.mode === "show";
 
-		$(this)
-			.css("opacity", show ? 0 : 1)
-			.animate({
-				opacity: show ? 1 : 0
-			}, {
-				queue: false,
-				duration: options.duration,
-				easing: options.easing,
-				complete: done
-			});
-	});
+	$( this )
+		.css( "opacity", show ? 0 : 1 )
+		.animate( {
+			opacity: show ? 1 : 0
+		}, {
+			queue: false,
+			duration: options.duration,
+			easing: options.easing,
+			complete: done
+		} );
+} );
 
-});
+} );

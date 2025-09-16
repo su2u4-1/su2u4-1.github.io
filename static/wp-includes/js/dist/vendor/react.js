@@ -9,10 +9,9 @@
  */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
-    typeof define === 'function' && define.amd ? define(['exports'], factory) :
-      (global = global || self, factory(global.React = {}));
-}(this, (function (exports) {
-  'use strict';
+  typeof define === 'function' && define.amd ? define(['exports'], factory) :
+  (global = global || self, factory(global.React = {}));
+}(this, (function (exports) { 'use strict';
 
   var ReactVersion = '18.3.1';
 
@@ -194,7 +193,7 @@
       }); // Careful: RN currently depends on this prefix
 
       argsWithFormat.unshift('Warning: ' + format); // We intentionally don't use spread (or .apply) directly because it
-      // breaks IE9: http://github.com/facebook/react/issues/13610
+      // breaks IE9: https://github.com/facebook/react/issues/13610
       // eslint-disable-next-line react-internal/no-production-logging
 
       Function.prototype.apply.call(console[level], console, argsWithFormat);
@@ -373,7 +372,7 @@
   {
     var deprecatedAPIs = {
       isMounted: ['isMounted', 'Instead, make sure to clean up subscriptions and pending requests in ' + 'componentWillUnmount to prevent memory leaks.'],
-      replaceState: ['replaceState', 'Refactor your code to use setState instead (see ' + 'http://github.com/facebook/react/issues/3236).']
+      replaceState: ['replaceState', 'Refactor your code to use setState instead (see ' + 'https://github.com/facebook/react/issues/3236).']
     };
 
     var defineDeprecationWarning = function (methodName, info) {
@@ -393,7 +392,7 @@
     }
   }
 
-  function ComponentDummy() { }
+  function ComponentDummy() {}
 
   ComponentDummy.prototype = Component.prototype;
   /**
@@ -435,7 +434,7 @@
 
   /*
    * The `'' + value` pattern (used in in perf-sensitive code) throws for Symbol
-   * and Temporal.* types. See http://github.com/facebook/react/pull/22064.
+   * and Temporal.* types. See https://github.com/facebook/react/pull/22064.
    *
    * The functions in this module will throw an easier-to-understand,
    * easier-to-debug exception with a clear errors message message explaining the
@@ -648,7 +647,7 @@
         if (!specialPropKeyWarningShown) {
           specialPropKeyWarningShown = true;
 
-          error('%s: `key` is not a prop. Trying to access it will result ' + 'in `undefined` being returned. If you need to access the same ' + 'value within the child component, you should pass it as a different ' + 'prop. (http://reactjs.org/link/special-props)', displayName);
+          error('%s: `key` is not a prop. Trying to access it will result ' + 'in `undefined` being returned. If you need to access the same ' + 'value within the child component, you should pass it as a different ' + 'prop. (https://reactjs.org/link/special-props)', displayName);
         }
       }
     };
@@ -666,7 +665,7 @@
         if (!specialPropRefWarningShown) {
           specialPropRefWarningShown = true;
 
-          error('%s: `ref` is not a prop. Trying to access it will result ' + 'in `undefined` being returned. If you need to access the same ' + 'value within the child component, you should pass it as a different ' + 'prop. (http://reactjs.org/link/special-props)', displayName);
+          error('%s: `ref` is not a prop. Trying to access it will result ' + 'in `undefined` being returned. If you need to access the same ' + 'value within the child component, you should pass it as a different ' + 'prop. (https://reactjs.org/link/special-props)', displayName);
         }
       }
     };
@@ -684,7 +683,7 @@
         var componentName = getComponentNameFromType(ReactCurrentOwner.current.type);
 
         if (!didWarnAboutStringRefs[componentName]) {
-          error('Component "%s" contains the string ref "%s". ' + 'Support for string refs will be removed in a future major release. ' + 'This case cannot be automatically converted to an arrow function. ' + 'We ask you to manually fix this case by using useRef() or createRef() instead. ' + 'Learn more about using refs safely here: ' + 'http://reactjs.org/link/strict-mode-string-ref', componentName, config.ref);
+          error('Component "%s" contains the string ref "%s". ' + 'Support for string refs will be removed in a future major release. ' + 'This case cannot be automatically converted to an arrow function. ' + 'We ask you to manually fix this case by using useRef() or createRef() instead. ' + 'Learn more about using refs safely here: ' + 'https://reactjs.org/link/strict-mode-string-ref', componentName, config.ref);
 
           didWarnAboutStringRefs[componentName] = true;
         }
@@ -768,7 +767,7 @@
   };
   /**
    * Create and return a new ReactElement of the given type.
-   * See http://reactjs.org/docs/react-api.html#createelement
+   * See https://reactjs.org/docs/react-api.html#createelement
    */
 
   function createElement(type, config, children) {
@@ -862,7 +861,7 @@
   }
   /**
    * Clone and return a new ReactElement using element as the starting point.
-   * See http://reactjs.org/docs/react-api.html#cloneelement
+   * See https://reactjs.org/docs/react-api.html#cloneelement
    */
 
   function cloneElement(element, config, children) {
@@ -939,7 +938,7 @@
   }
   /**
    * Verifies the object is a ReactElement.
-   * See http://reactjs.org/docs/react-api.html#isvalidelement
+   * See https://reactjs.org/docs/react-api.html#isvalidelement
    * @param {?object} object
    * @return {boolean} True if `object` is a ReactElement.
    * @final
@@ -1064,11 +1063,11 @@
           }
 
           mappedChild = cloneAndReplaceKey(mappedChild, // Keep both the (mapped) and old keys if they differ, just as
-            // traverseAllChildren used to do for objects as children
-            escapedPrefix + ( // $FlowFixMe Flow incorrectly thinks React.Portal doesn't have a key
-              mappedChild.key && (!_child || _child.key !== mappedChild.key) ? // $FlowFixMe Flow incorrectly thinks existing element's key can be a number
-                // eslint-disable-next-line react-internal/safe-string-coercion
-                escapeUserProvidedKey('' + mappedChild.key) + '/' : '') + childKey);
+          // traverseAllChildren used to do for objects as children
+          escapedPrefix + ( // $FlowFixMe Flow incorrectly thinks React.Portal doesn't have a key
+          mappedChild.key && (!_child || _child.key !== mappedChild.key) ? // $FlowFixMe Flow incorrectly thinks existing element's key can be a number
+          // eslint-disable-next-line react-internal/safe-string-coercion
+          escapeUserProvidedKey('' + mappedChild.key) + '/' : '') + childKey);
         }
 
         array.push(mappedChild);
@@ -1128,7 +1127,7 @@
   /**
    * Maps children that are typically specified as `props.children`.
    *
-   * See http://reactjs.org/docs/react-api.html#reactchildrenmap
+   * See https://reactjs.org/docs/react-api.html#reactchildrenmap
    *
    * The provided mapFunction(child, index) will be called for each
    * leaf child.
@@ -1154,7 +1153,7 @@
    * Count the number of children that are typically specified as
    * `props.children`.
    *
-   * See http://reactjs.org/docs/react-api.html#reactchildrencount
+   * See https://reactjs.org/docs/react-api.html#reactchildrencount
    *
    * @param {?*} children Children tree container.
    * @return {number} The number of children.
@@ -1172,7 +1171,7 @@
   /**
    * Iterates through children that are typically specified as `props.children`.
    *
-   * See http://reactjs.org/docs/react-api.html#reactchildrenforeach
+   * See https://reactjs.org/docs/react-api.html#reactchildrenforeach
    *
    * The provided forEachFunc(child, index) will be called for each
    * leaf child.
@@ -1190,7 +1189,7 @@
    * Flatten a children object (typically specified as `props.children`) and
    * return an array with appropriately re-keyed children.
    *
-   * See http://reactjs.org/docs/react-api.html#reactchildrentoarray
+   * See https://reactjs.org/docs/react-api.html#reactchildrentoarray
    */
 
 
@@ -1203,7 +1202,7 @@
    * Returns the first child in a collection of children and verifies that there
    * is only one child in the collection.
    *
-   * See http://reactjs.org/docs/react-api.html#reactchildrenonly
+   * See https://reactjs.org/docs/react-api.html#reactchildrenonly
    *
    * The current implementation of this function assumes that a single child gets
    * passed without a wrapper, but the purpose of this helper function is to
@@ -1382,14 +1381,14 @@
       {
         if (moduleObject === undefined) {
           error('lazy: Expected the result of a dynamic imp' + 'ort() call. ' + 'Instead received: %s\n\nYour code should look like: \n  ' + // Break up imports to avoid accidentally parsing them as dependencies.
-            'const MyComponent = lazy(() => imp' + "ort('./MyComponent'))\n\n" + 'Did you accidentally put curly braces around the import?', moduleObject);
+          'const MyComponent = lazy(() => imp' + "ort('./MyComponent'))\n\n" + 'Did you accidentally put curly braces around the import?', moduleObject);
         }
       }
 
       {
         if (!('default' in moduleObject)) {
           error('lazy: Expected the result of a dynamic imp' + 'ort() call. ' + 'Instead received: %s\n\nYour code should look like: \n  ' + // Break up imports to avoid accidentally parsing them as dependencies.
-            'const MyComponent = lazy(() => imp' + "ort('./MyComponent'))", moduleObject);
+          'const MyComponent = lazy(() => imp' + "ort('./MyComponent'))", moduleObject);
         }
       }
 
@@ -1518,16 +1517,16 @@
     } // Note: typeof might be other than 'symbol' or 'number' (e.g. if it's a polyfill).
 
 
-    if (type === REACT_FRAGMENT_TYPE || type === REACT_PROFILER_TYPE || enableDebugTracing || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || enableLegacyHidden || type === REACT_OFFSCREEN_TYPE || enableScopeAPI || enableCacheElement || enableTransitionTracing) {
+    if (type === REACT_FRAGMENT_TYPE || type === REACT_PROFILER_TYPE || enableDebugTracing  || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || enableLegacyHidden  || type === REACT_OFFSCREEN_TYPE || enableScopeAPI  || enableCacheElement  || enableTransitionTracing ) {
       return true;
     }
 
     if (typeof type === 'object' && type !== null) {
       if (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || // This needs to include all possible module reference object
-        // types supported by any Flight configuration anywhere since
-        // we don't know which Flight build this will end up being used
-        // with.
-        type.$$typeof === REACT_MODULE_REFERENCE || type.getModuleId !== undefined) {
+      // types supported by any Flight configuration anywhere since
+      // we don't know which Flight build this will end up being used
+      // with.
+      type.$$typeof === REACT_MODULE_REFERENCE || type.getModuleId !== undefined) {
         return true;
       }
     }
@@ -1580,7 +1579,7 @@
 
     {
       if (dispatcher === null) {
-        error('Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for' + ' one of the following reasons:\n' + '1. You might have mismatching versions of React and the renderer (such as React DOM)\n' + '2. You might be breaking the Rules of Hooks\n' + '3. You might have more than one copy of React in the same app\n' + 'See http://reactjs.org/link/invalid-hook-call for tips about how to debug and fix this problem.');
+        error('Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for' + ' one of the following reasons:\n' + '1. You might have mismatching versions of React and the renderer (such as React DOM)\n' + '2. You might be breaking the Rules of Hooks\n' + '3. You might have more than one copy of React in the same app\n' + 'See https://reactjs.org/link/invalid-hook-call for tips about how to debug and fix this problem.');
       }
     } // Will result in a null access error if accessed outside render phase. We
     // intentionally don't throw our own error because this is in a hot path.
@@ -1680,7 +1679,7 @@
   var prevGroupCollapsed;
   var prevGroupEnd;
 
-  function disabledLog() { }
+  function disabledLog() {}
 
   disabledLog.__reactDisabledLog = true;
   function disableLogs() {
@@ -1693,7 +1692,7 @@
         prevError = console.error;
         prevGroup = console.group;
         prevGroupCollapsed = console.groupCollapsed;
-        prevGroupEnd = console.groupEnd; // http://github.com/facebook/react/issues/19099
+        prevGroupEnd = console.groupEnd; // https://github.com/facebook/react/issues/19099
 
         var props = {
           configurable: true,
@@ -1789,7 +1788,7 @@
 
   function describeNativeComponentFrame(fn, construct) {
     // If something asked for a stack inside a fake render, it should get ignored.
-    if (!fn || reentry) {
+    if ( !fn || reentry) {
       return '';
     }
 
@@ -1999,7 +1998,7 @@
             try {
               // Lazy may contain any component type so we recursively resolve it.
               return describeUnknownElementTypeFrameInDEV(init(payload), source, ownerFn);
-            } catch (x) { }
+            } catch (x) {}
           }
       }
     }
@@ -2179,7 +2178,7 @@
     {
       setCurrentlyValidatingElement$1(element);
 
-      error('Each child in a list should have a unique "key" prop.' + '%s%s See http://reactjs.org/link/warning-keys for more information.', currentComponentErrorInfo, childOwner);
+      error('Each child in a list should have a unique "key" prop.' + '%s%s See https://reactjs.org/link/warning-keys for more information.', currentComponentErrorInfo, childOwner);
 
       setCurrentlyValidatingElement$1(null);
     }
@@ -2253,8 +2252,8 @@
       if (typeof type === 'function') {
         propTypes = type.propTypes;
       } else if (typeof type === 'object' && (type.$$typeof === REACT_FORWARD_REF_TYPE || // Note: Memo only checks outer props here.
-        // Inner props are checked in the reconciler.
-        type.$$typeof === REACT_MEMO_TYPE)) {
+      // Inner props are checked in the reconciler.
+      type.$$typeof === REACT_MEMO_TYPE)) {
         propTypes = type.propTypes;
       } else {
         return;
@@ -2638,7 +2637,7 @@
     advanceTimers(currentTime);
     currentTask = peek(taskQueue);
 
-    while (currentTask !== null && !(enableSchedulerDebugging)) {
+    while (currentTask !== null && !(enableSchedulerDebugging )) {
       if (currentTask.expirationTime > currentTime && (!hasTimeRemaining || shouldYieldToHost())) {
         // This currentTask hasn't expired, and we've reached the deadline.
         break;
@@ -2943,7 +2942,7 @@
     // Unlike MessageChannel, it doesn't prevent a Node.js process from exiting.
     // (Even though this is a DOM fork of the Scheduler, you could get here
     // with a mix of Node.js 15+, which has a MessageChannel, and jsdom.)
-    // http://github.com/facebook/react/issues/20756
+    // https://github.com/facebook/react/issues/20756
     //
     // But also, it runs earlier which is the semantic we want.
     // If other browsers ever implement it, it's better to use it.
@@ -2989,7 +2988,7 @@
   }
 
   var unstable_requestPaint = requestPaint;
-  var unstable_Profiling = null;
+  var unstable_Profiling =  null;
 
 
 
@@ -3011,7 +3010,7 @@
     unstable_continueExecution: unstable_continueExecution,
     unstable_pauseExecution: unstable_pauseExecution,
     unstable_getFirstCallbackNode: unstable_getFirstCallbackNode,
-    get unstable_now() { return getCurrentTime; },
+    get unstable_now () { return getCurrentTime; },
     unstable_forceFrameRate: forceFrameRate,
     unstable_Profiling: unstable_Profiling
   });
@@ -3083,7 +3082,7 @@
               didWarnAboutMessageChannel = true;
 
               if (typeof MessageChannel === 'undefined') {
-                error('This browser does not have a MessageChannel implementation, ' + 'so enqueuing tasks via await act(async () => ...) will fail. ' + 'Please file an issue at http://github.com/facebook/react/issues ' + 'if you encounter this warning.');
+                error('This browser does not have a MessageChannel implementation, ' + 'so enqueuing tasks via await act(async () => ...) will fail. ' + 'Please file an issue at https://github.com/facebook/react/issues ' + 'if you encounter this warning.');
               }
             }
           }
@@ -3170,7 +3169,7 @@
         {
           if (!didWarnNoAwaitAct && typeof Promise !== 'undefined') {
             // eslint-disable-next-line no-undef
-            Promise.resolve().then(function () { }).then(function () {
+            Promise.resolve().then(function () {}).then(function () {
               if (!wasAwaited) {
                 didWarnNoAwaitAct = true;
 
@@ -3293,9 +3292,9 @@
     }
   }
 
-  var createElement$1 = createElementWithValidation;
-  var cloneElement$1 = cloneElementWithValidation;
-  var createFactory = createFactoryWithValidation;
+  var createElement$1 =  createElementWithValidation ;
+  var cloneElement$1 =  cloneElementWithValidation ;
+  var createFactory =  createFactoryWithValidation ;
   var Children = {
     map: mapChildren,
     forEach: forEachChildren,

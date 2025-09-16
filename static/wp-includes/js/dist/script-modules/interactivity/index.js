@@ -12,68 +12,57 @@
 /* harmony export */   q6: () => (/* binding */ K),
 /* harmony export */   uA: () => (/* binding */ x),
 /* harmony export */   zO: () => (/* binding */ u)
-  /* harmony export */
-});
-      /* unused harmony exports Fragment, createElement, createRef, toChildArray */
-      var n, l, t, u, i, r, o, e, f, c, s, a, h, p = {}, v = [], y = /acit|ex(?:s|g|n|p|$)|rph|grid|ows|mnc|ntw|ine[ch]|zoo|^ord|itera/i, d = Array.isArray; function w(n, l) { for (var t in l) n[t] = l[t]; return n } function g(n) { n && n.parentNode && n.parentNode.removeChild(n) } function _(l, t, u) { var i, r, o, e = {}; for (o in t) "key" == o ? i = t[o] : "ref" == o ? r = t[o] : e[o] = t[o]; if (arguments.length > 2 && (e.children = arguments.length > 3 ? n.call(arguments, 2) : u), "function" == typeof l && null != l.defaultProps) for (o in l.defaultProps) void 0 === e[o] && (e[o] = l.defaultProps[o]); return m(l, e, i, r, null) } function m(n, u, i, r, o) { var e = { type: n, props: u, key: i, ref: r, __k: null, __: null, __b: 0, __e: null, __c: null, constructor: void 0, __v: null == o ? ++t : o, __i: -1, __u: 0 }; return null == o && null != l.vnode && l.vnode(e), e } function b() { return { current: null } } function k(n) { return n.children } function x(n, l) { this.props = n, this.context = l } function S(n, l) { if (null == l) return n.__ ? S(n.__, n.__i + 1) : null; for (var t; l < n.__k.length; l++)if (null != (t = n.__k[l]) && null != t.__e) return t.__e; return "function" == typeof n.type ? S(n) : null } function C(n) { var l, t; if (null != (n = n.__) && null != n.__c) { for (n.__e = n.__c.base = null, l = 0; l < n.__k.length; l++)if (null != (t = n.__k[l]) && null != t.__e) { n.__e = n.__c.base = t.__e; break } return C(n) } } function M(n) { (!n.__d && (n.__d = !0) && i.push(n) && !$.__r++ || r !== l.debounceRendering) && ((r = l.debounceRendering) || o)($) } function $() { for (var n, t, u, r, o, f, c, s = 1; i.length;)i.length > s && i.sort(e), n = i.shift(), s = i.length, n.__d && (u = void 0, o = (r = (t = n).__v).__e, f = [], c = [], t.__P && ((u = w({}, r)).__v = r.__v + 1, l.vnode && l.vnode(u), O(t.__P, u, r, t.__n, t.__P.namespaceURI, 32 & r.__u ? [o] : null, f, null == o ? S(r) : o, !!(32 & r.__u), c), u.__v = r.__v, u.__.__k[u.__i] = u, z(f, u, c), u.__e != o && C(u))); $.__r = 0 } function I(n, l, t, u, i, r, o, e, f, c, s) { var a, h, y, d, w, g, _ = u && u.__k || v, m = l.length; for (f = P(t, l, _, f, m), a = 0; a < m; a++)null != (y = t.__k[a]) && (h = -1 === y.__i ? p : _[y.__i] || p, y.__i = a, g = O(n, y, h, i, r, o, e, f, c, s), d = y.__e, y.ref && h.ref != y.ref && (h.ref && q(h.ref, null, y), s.push(y.ref, y.__c || d, y)), null == w && null != d && (w = d), 4 & y.__u || h.__k === y.__k ? f = A(y, f, n) : "function" == typeof y.type && void 0 !== g ? f = g : d && (f = d.nextSibling), y.__u &= -7); return t.__e = w, f } function P(n, l, t, u, i) { var r, o, e, f, c, s = t.length, a = s, h = 0; for (n.__k = new Array(i), r = 0; r < i; r++)null != (o = l[r]) && "boolean" != typeof o && "function" != typeof o ? (f = r + h, (o = n.__k[r] = "string" == typeof o || "number" == typeof o || "bigint" == typeof o || o.constructor == String ? m(null, o, null, null, null) : d(o) ? m(k, { children: o }, null, null, null) : void 0 === o.constructor && o.__b > 0 ? m(o.type, o.props, o.key, o.ref ? o.ref : null, o.__v) : o).__ = n, o.__b = n.__b + 1, e = null, -1 !== (c = o.__i = L(o, t, f, a)) && (a--, (e = t[c]) && (e.__u |= 2)), null == e || null === e.__v ? (-1 == c && (i > s ? h-- : i < s && h++), "function" != typeof o.type && (o.__u |= 4)) : c != f && (c == f - 1 ? h-- : c == f + 1 ? h++ : (c > f ? h-- : h++, o.__u |= 4))) : n.__k[r] = null; if (a) for (r = 0; r < s; r++)null != (e = t[r]) && 0 == (2 & e.__u) && (e.__e == u && (u = S(e)), B(e, e)); return u } function A(n, l, t) { var u, i; if ("function" == typeof n.type) { for (u = n.__k, i = 0; u && i < u.length; i++)u[i] && (u[i].__ = n, l = A(u[i], l, t)); return l } n.__e != l && (l && n.type && !t.contains(l) && (l = S(n)), t.insertBefore(n.__e, l || null), l = n.__e); do { l = l && l.nextSibling } while (null != l && 8 == l.nodeType); return l } function H(n, l) { return l = l || [], null == n || "boolean" == typeof n || (d(n) ? n.some(function (n) { H(n, l) }) : l.push(n)), l } function L(n, l, t, u) { var i, r, o = n.key, e = n.type, f = l[t]; if (null === f && null == n.key || f && o == f.key && e === f.type && 0 == (2 & f.__u)) return t; if (u > (null != f && 0 == (2 & f.__u) ? 1 : 0)) for (i = t - 1, r = t + 1; i >= 0 || r < l.length;) { if (i >= 0) { if ((f = l[i]) && 0 == (2 & f.__u) && o == f.key && e === f.type) return i; i-- } if (r < l.length) { if ((f = l[r]) && 0 == (2 & f.__u) && o == f.key && e === f.type) return r; r++ } } return -1 } function T(n, l, t) { "-" == l[0] ? n.setProperty(l, null == t ? "" : t) : n[l] = null == t ? "" : "number" != typeof t || y.test(l) ? t : t + "px" } function j(n, l, t, u, i) { var r; n: if ("style" == l) if ("string" == typeof t) n.style.cssText = t; else { if ("string" == typeof u && (n.style.cssText = u = ""), u) for (l in u) t && l in t || T(n.style, l, ""); if (t) for (l in t) u && t[l] === u[l] || T(n.style, l, t[l]) } else if ("o" == l[0] && "n" == l[1]) r = l != (l = l.replace(f, "$1")), l = l.toLowerCase() in n || "onFocusOut" == l || "onFocusIn" == l ? l.toLowerCase().slice(2) : l.slice(2), n.l || (n.l = {}), n.l[l + r] = t, t ? u ? t.t = u.t : (t.t = c, n.addEventListener(l, r ? a : s, r)) : n.removeEventListener(l, r ? a : s, r); else { if ("http://www.w3.org/2000/svg" == i) l = l.replace(/xlink(H|:h)/, "h").replace(/sName$/, "s"); else if ("width" != l && "height" != l && "href" != l && "list" != l && "form" != l && "tabIndex" != l && "download" != l && "rowSpan" != l && "colSpan" != l && "role" != l && "popover" != l && l in n) try { n[l] = null == t ? "" : t; break n } catch (n) { } "function" == typeof t || (null == t || !1 === t && "-" != l[4] ? n.removeAttribute(l) : n.setAttribute(l, "popover" == l && 1 == t ? "" : t)) } } function F(n) { return function (t) { if (this.l) { var u = this.l[t.type + n]; if (null == t.u) t.u = c++; else if (t.u < u.t) return; return u(l.event ? l.event(t) : t) } } } function O(n, t, u, i, r, o, e, f, c, s) { var a, h, p, v, y, _, m, b, S, C, M, $, P, A, H, L, T, j = t.type; if (void 0 !== t.constructor) return null; 128 & u.__u && (c = !!(32 & u.__u), o = [f = t.__e = u.__e]), (a = l.__b) && a(t); n: if ("function" == typeof j) try { if (b = t.props, S = "prototype" in j && j.prototype.render, C = (a = j.contextType) && i[a.__c], M = a ? C ? C.props.value : a.__ : i, u.__c ? m = (h = t.__c = u.__c).__ = h.__E : (S ? t.__c = h = new j(b, M) : (t.__c = h = new x(b, M), h.constructor = j, h.render = D), C && C.sub(h), h.props = b, h.state || (h.state = {}), h.context = M, h.__n = i, p = h.__d = !0, h.__h = [], h._sb = []), S && null == h.__s && (h.__s = h.state), S && null != j.getDerivedStateFromProps && (h.__s == h.state && (h.__s = w({}, h.__s)), w(h.__s, j.getDerivedStateFromProps(b, h.__s))), v = h.props, y = h.state, h.__v = t, p) S && null == j.getDerivedStateFromProps && null != h.componentWillMount && h.componentWillMount(), S && null != h.componentDidMount && h.__h.push(h.componentDidMount); else { if (S && null == j.getDerivedStateFromProps && b !== v && null != h.componentWillReceiveProps && h.componentWillReceiveProps(b, M), !h.__e && (null != h.shouldComponentUpdate && !1 === h.shouldComponentUpdate(b, h.__s, M) || t.__v == u.__v)) { for (t.__v != u.__v && (h.props = b, h.state = h.__s, h.__d = !1), t.__e = u.__e, t.__k = u.__k, t.__k.some(function (n) { n && (n.__ = t) }), $ = 0; $ < h._sb.length; $++)h.__h.push(h._sb[$]); h._sb = [], h.__h.length && e.push(h); break n } null != h.componentWillUpdate && h.componentWillUpdate(b, h.__s, M), S && null != h.componentDidUpdate && h.__h.push(function () { h.componentDidUpdate(v, y, _) }) } if (h.context = M, h.props = b, h.__P = n, h.__e = !1, P = l.__r, A = 0, S) { for (h.state = h.__s, h.__d = !1, P && P(t), a = h.render(h.props, h.state, h.context), H = 0; H < h._sb.length; H++)h.__h.push(h._sb[H]); h._sb = [] } else do { h.__d = !1, P && P(t), a = h.render(h.props, h.state, h.context), h.state = h.__s } while (h.__d && ++A < 25); h.state = h.__s, null != h.getChildContext && (i = w(w({}, i), h.getChildContext())), S && !p && null != h.getSnapshotBeforeUpdate && (_ = h.getSnapshotBeforeUpdate(v, y)), L = a, null != a && a.type === k && null == a.key && (L = N(a.props.children)), f = I(n, d(L) ? L : [L], t, u, i, r, o, e, f, c, s), h.base = t.__e, t.__u &= -161, h.__h.length && e.push(h), m && (h.__E = h.__ = null) } catch (n) { if (t.__v = null, c || null != o) if (n.then) { for (t.__u |= c ? 160 : 128; f && 8 == f.nodeType && f.nextSibling;)f = f.nextSibling; o[o.indexOf(f)] = null, t.__e = f } else for (T = o.length; T--;)g(o[T]); else t.__e = u.__e, t.__k = u.__k; l.__e(n, t, u) } else null == o && t.__v == u.__v ? (t.__k = u.__k, t.__e = u.__e) : f = t.__e = V(u.__e, t, u, i, r, o, e, c, s); return (a = l.diffed) && a(t), 128 & t.__u ? void 0 : f } function z(n, t, u) { for (var i = 0; i < u.length; i++)q(u[i], u[++i], u[++i]); l.__c && l.__c(t, n), n.some(function (t) { try { n = t.__h, t.__h = [], n.some(function (n) { n.call(t) }) } catch (n) { l.__e(n, t.__v) } }) } function N(n) { return "object" != typeof n || null == n ? n : d(n) ? n.map(N) : w({}, n) } function V(t, u, i, r, o, e, f, c, s) { var a, h, v, y, w, _, m, b = i.props, k = u.props, x = u.type; if ("svg" == x ? o = "http://www.w3.org/2000/svg" : "math" == x ? o = "http://www.w3.org/1998/Math/MathML" : o || (o = "http://www.w3.org/1999/xhtml"), null != e) for (a = 0; a < e.length; a++)if ((w = e[a]) && "setAttribute" in w == !!x && (x ? w.localName == x : 3 == w.nodeType)) { t = w, e[a] = null; break } if (null == t) { if (null == x) return document.createTextNode(k); t = document.createElementNS(o, x, k.is && k), c && (l.__m && l.__m(u, e), c = !1), e = null } if (null === x) b === k || c && t.data === k || (t.data = k); else { if (e = e && n.call(t.childNodes), b = i.props || p, !c && null != e) for (b = {}, a = 0; a < t.attributes.length; a++)b[(w = t.attributes[a]).name] = w.value; for (a in b) if (w = b[a], "children" == a); else if ("dangerouslySetInnerHTML" == a) v = w; else if (!(a in k)) { if ("value" == a && "defaultValue" in k || "checked" == a && "defaultChecked" in k) continue; j(t, a, null, w, o) } for (a in k) w = k[a], "children" == a ? y = w : "dangerouslySetInnerHTML" == a ? h = w : "value" == a ? _ = w : "checked" == a ? m = w : c && "function" != typeof w || b[a] === w || j(t, a, w, b[a], o); if (h) c || v && (h.__html === v.__html || h.__html === t.innerHTML) || (t.innerHTML = h.__html), u.__k = []; else if (v && (t.innerHTML = ""), I("template" === u.type ? t.content : t, d(y) ? y : [y], u, i, r, "foreignObject" == x ? "http://www.w3.org/1999/xhtml" : o, e, f, e ? e[0] : i.__k && S(i, 0), c, s), null != e) for (a = e.length; a--;)g(e[a]); c || (a = "value", "progress" == x && null == _ ? t.removeAttribute("value") : void 0 !== _ && (_ !== t[a] || "progress" == x && !_ || "option" == x && _ !== b[a]) && j(t, a, _, b[a], o), a = "checked", void 0 !== m && m !== t[a] && j(t, a, m, b[a], o)) } return t } function q(n, t, u) { try { if ("function" == typeof n) { var i = "function" == typeof n.__u; i && n.__u(), i && null == t || (n.__u = n(t)) } else n.current = t } catch (n) { l.__e(n, u) } } function B(n, t, u) { var i, r; if (l.unmount && l.unmount(n), (i = n.ref) && (i.current && i.current !== n.__e || q(i, null, t)), null != (i = n.__c)) { if (i.componentWillUnmount) try { i.componentWillUnmount() } catch (n) { l.__e(n, t) } i.base = i.__P = null } if (i = n.__k) for (r = 0; r < i.length; r++)i[r] && B(i[r], t, u || "function" != typeof n.type); u || g(n.__e), n.__c = n.__ = n.__e = void 0 } function D(n, l, t) { return this.constructor(n, t) } function E(t, u, i) { var r, o, e, f; u == document && (u = document.documentElement), l.__ && l.__(t, u), o = (r = "function" == typeof i) ? null : i && i.__k || u.__k, e = [], f = [], O(u, t = (!r && i || u).__k = _(k, null, [t]), o || p, p, u.namespaceURI, !r && i ? [i] : o ? null : u.firstChild ? n.call(u.childNodes) : null, e, !r && i ? i : o ? o.__e : u.firstChild, r, f), z(e, t, f) } function G(n, l) { E(n, l, G) } function J(l, t, u) { var i, r, o, e, f = w({}, l.props); for (o in l.type && l.type.defaultProps && (e = l.type.defaultProps), t) "key" == o ? i = t[o] : "ref" == o ? r = t[o] : f[o] = void 0 === t[o] && void 0 !== e ? e[o] : t[o]; return arguments.length > 2 && (f.children = arguments.length > 3 ? n.call(arguments, 2) : u), m(l.type, f, i || l.key, r || l.ref, null) } function K(n) { function l(n) { var t, u; return this.getChildContext || (t = new Set, (u = {})[l.__c] = this, this.getChildContext = function () { return u }, this.componentWillUnmount = function () { t = null }, this.shouldComponentUpdate = function (n) { this.props.value !== n.value && t.forEach(function (n) { n.__e = !0, M(n) }) }, this.sub = function (n) { t.add(n); var l = n.componentWillUnmount; n.componentWillUnmount = function () { t && t.delete(n), l && l.call(n) } }), n.children } return l.__c = "__cC" + h++, l.__ = n, l.Provider = l.__l = (l.Consumer = function (n, l) { return n.children(l) }).contextType = l, l } n = v.slice, l = { __e: function (n, l, t, u) { for (var i, r, o; l = l.__;)if ((i = l.__c) && !i.__) try { if ((r = i.constructor) && null != r.getDerivedStateFromError && (i.setState(r.getDerivedStateFromError(n)), o = i.__d), null != i.componentDidCatch && (i.componentDidCatch(n, u || {}), o = i.__d), o) return i.__E = i } catch (l) { n = l } throw n } }, t = 0, u = function (n) { return null != n && null == n.constructor }, x.prototype.setState = function (n, l) { var t; t = null != this.__s && this.__s !== this.state ? this.__s : this.__s = w({}, this.state), "function" == typeof n && (n = n(w({}, t), this.props)), n && w(t, n), null != n && this.__v && (l && this._sb.push(l), M(this)) }, x.prototype.forceUpdate = function (n) { this.__v && (this.__e = !0, n && this.__h.push(n), M(this)) }, x.prototype.render = k, i = [], o = "function" == typeof Promise ? Promise.prototype.then.bind(Promise.resolve()) : setTimeout, e = function (n, l) { return n.__v.__b - l.__v.__b }, $.__r = 0, f = /(PointerCapture)$|Capture$/i, c = 0, s = F(!1), a = F(!0), h = 0;
+/* harmony export */ });
+/* unused harmony exports Fragment, createElement, createRef, toChildArray */
+var n,l,t,u,i,r,o,e,f,c,s,a,h,p={},v=[],y=/acit|ex(?:s|g|n|p|$)|rph|grid|ows|mnc|ntw|ine[ch]|zoo|^ord|itera/i,d=Array.isArray;function w(n,l){for(var t in l)n[t]=l[t];return n}function g(n){n&&n.parentNode&&n.parentNode.removeChild(n)}function _(l,t,u){var i,r,o,e={};for(o in t)"key"==o?i=t[o]:"ref"==o?r=t[o]:e[o]=t[o];if(arguments.length>2&&(e.children=arguments.length>3?n.call(arguments,2):u),"function"==typeof l&&null!=l.defaultProps)for(o in l.defaultProps)void 0===e[o]&&(e[o]=l.defaultProps[o]);return m(l,e,i,r,null)}function m(n,u,i,r,o){var e={type:n,props:u,key:i,ref:r,__k:null,__:null,__b:0,__e:null,__c:null,constructor:void 0,__v:null==o?++t:o,__i:-1,__u:0};return null==o&&null!=l.vnode&&l.vnode(e),e}function b(){return{current:null}}function k(n){return n.children}function x(n,l){this.props=n,this.context=l}function S(n,l){if(null==l)return n.__?S(n.__,n.__i+1):null;for(var t;l<n.__k.length;l++)if(null!=(t=n.__k[l])&&null!=t.__e)return t.__e;return"function"==typeof n.type?S(n):null}function C(n){var l,t;if(null!=(n=n.__)&&null!=n.__c){for(n.__e=n.__c.base=null,l=0;l<n.__k.length;l++)if(null!=(t=n.__k[l])&&null!=t.__e){n.__e=n.__c.base=t.__e;break}return C(n)}}function M(n){(!n.__d&&(n.__d=!0)&&i.push(n)&&!$.__r++||r!==l.debounceRendering)&&((r=l.debounceRendering)||o)($)}function $(){for(var n,t,u,r,o,f,c,s=1;i.length;)i.length>s&&i.sort(e),n=i.shift(),s=i.length,n.__d&&(u=void 0,o=(r=(t=n).__v).__e,f=[],c=[],t.__P&&((u=w({},r)).__v=r.__v+1,l.vnode&&l.vnode(u),O(t.__P,u,r,t.__n,t.__P.namespaceURI,32&r.__u?[o]:null,f,null==o?S(r):o,!!(32&r.__u),c),u.__v=r.__v,u.__.__k[u.__i]=u,z(f,u,c),u.__e!=o&&C(u)));$.__r=0}function I(n,l,t,u,i,r,o,e,f,c,s){var a,h,y,d,w,g,_=u&&u.__k||v,m=l.length;for(f=P(t,l,_,f,m),a=0;a<m;a++)null!=(y=t.__k[a])&&(h=-1===y.__i?p:_[y.__i]||p,y.__i=a,g=O(n,y,h,i,r,o,e,f,c,s),d=y.__e,y.ref&&h.ref!=y.ref&&(h.ref&&q(h.ref,null,y),s.push(y.ref,y.__c||d,y)),null==w&&null!=d&&(w=d),4&y.__u||h.__k===y.__k?f=A(y,f,n):"function"==typeof y.type&&void 0!==g?f=g:d&&(f=d.nextSibling),y.__u&=-7);return t.__e=w,f}function P(n,l,t,u,i){var r,o,e,f,c,s=t.length,a=s,h=0;for(n.__k=new Array(i),r=0;r<i;r++)null!=(o=l[r])&&"boolean"!=typeof o&&"function"!=typeof o?(f=r+h,(o=n.__k[r]="string"==typeof o||"number"==typeof o||"bigint"==typeof o||o.constructor==String?m(null,o,null,null,null):d(o)?m(k,{children:o},null,null,null):void 0===o.constructor&&o.__b>0?m(o.type,o.props,o.key,o.ref?o.ref:null,o.__v):o).__=n,o.__b=n.__b+1,e=null,-1!==(c=o.__i=L(o,t,f,a))&&(a--,(e=t[c])&&(e.__u|=2)),null==e||null===e.__v?(-1==c&&(i>s?h--:i<s&&h++),"function"!=typeof o.type&&(o.__u|=4)):c!=f&&(c==f-1?h--:c==f+1?h++:(c>f?h--:h++,o.__u|=4))):n.__k[r]=null;if(a)for(r=0;r<s;r++)null!=(e=t[r])&&0==(2&e.__u)&&(e.__e==u&&(u=S(e)),B(e,e));return u}function A(n,l,t){var u,i;if("function"==typeof n.type){for(u=n.__k,i=0;u&&i<u.length;i++)u[i]&&(u[i].__=n,l=A(u[i],l,t));return l}n.__e!=l&&(l&&n.type&&!t.contains(l)&&(l=S(n)),t.insertBefore(n.__e,l||null),l=n.__e);do{l=l&&l.nextSibling}while(null!=l&&8==l.nodeType);return l}function H(n,l){return l=l||[],null==n||"boolean"==typeof n||(d(n)?n.some(function(n){H(n,l)}):l.push(n)),l}function L(n,l,t,u){var i,r,o=n.key,e=n.type,f=l[t];if(null===f&&null==n.key||f&&o==f.key&&e===f.type&&0==(2&f.__u))return t;if(u>(null!=f&&0==(2&f.__u)?1:0))for(i=t-1,r=t+1;i>=0||r<l.length;){if(i>=0){if((f=l[i])&&0==(2&f.__u)&&o==f.key&&e===f.type)return i;i--}if(r<l.length){if((f=l[r])&&0==(2&f.__u)&&o==f.key&&e===f.type)return r;r++}}return-1}function T(n,l,t){"-"==l[0]?n.setProperty(l,null==t?"":t):n[l]=null==t?"":"number"!=typeof t||y.test(l)?t:t+"px"}function j(n,l,t,u,i){var r;n:if("style"==l)if("string"==typeof t)n.style.cssText=t;else{if("string"==typeof u&&(n.style.cssText=u=""),u)for(l in u)t&&l in t||T(n.style,l,"");if(t)for(l in t)u&&t[l]===u[l]||T(n.style,l,t[l])}else if("o"==l[0]&&"n"==l[1])r=l!=(l=l.replace(f,"$1")),l=l.toLowerCase()in n||"onFocusOut"==l||"onFocusIn"==l?l.toLowerCase().slice(2):l.slice(2),n.l||(n.l={}),n.l[l+r]=t,t?u?t.t=u.t:(t.t=c,n.addEventListener(l,r?a:s,r)):n.removeEventListener(l,r?a:s,r);else{if("http://www.w3.org/2000/svg"==i)l=l.replace(/xlink(H|:h)/,"h").replace(/sName$/,"s");else if("width"!=l&&"height"!=l&&"href"!=l&&"list"!=l&&"form"!=l&&"tabIndex"!=l&&"download"!=l&&"rowSpan"!=l&&"colSpan"!=l&&"role"!=l&&"popover"!=l&&l in n)try{n[l]=null==t?"":t;break n}catch(n){}"function"==typeof t||(null==t||!1===t&&"-"!=l[4]?n.removeAttribute(l):n.setAttribute(l,"popover"==l&&1==t?"":t))}}function F(n){return function(t){if(this.l){var u=this.l[t.type+n];if(null==t.u)t.u=c++;else if(t.u<u.t)return;return u(l.event?l.event(t):t)}}}function O(n,t,u,i,r,o,e,f,c,s){var a,h,p,v,y,_,m,b,S,C,M,$,P,A,H,L,T,j=t.type;if(void 0!==t.constructor)return null;128&u.__u&&(c=!!(32&u.__u),o=[f=t.__e=u.__e]),(a=l.__b)&&a(t);n:if("function"==typeof j)try{if(b=t.props,S="prototype"in j&&j.prototype.render,C=(a=j.contextType)&&i[a.__c],M=a?C?C.props.value:a.__:i,u.__c?m=(h=t.__c=u.__c).__=h.__E:(S?t.__c=h=new j(b,M):(t.__c=h=new x(b,M),h.constructor=j,h.render=D),C&&C.sub(h),h.props=b,h.state||(h.state={}),h.context=M,h.__n=i,p=h.__d=!0,h.__h=[],h._sb=[]),S&&null==h.__s&&(h.__s=h.state),S&&null!=j.getDerivedStateFromProps&&(h.__s==h.state&&(h.__s=w({},h.__s)),w(h.__s,j.getDerivedStateFromProps(b,h.__s))),v=h.props,y=h.state,h.__v=t,p)S&&null==j.getDerivedStateFromProps&&null!=h.componentWillMount&&h.componentWillMount(),S&&null!=h.componentDidMount&&h.__h.push(h.componentDidMount);else{if(S&&null==j.getDerivedStateFromProps&&b!==v&&null!=h.componentWillReceiveProps&&h.componentWillReceiveProps(b,M),!h.__e&&(null!=h.shouldComponentUpdate&&!1===h.shouldComponentUpdate(b,h.__s,M)||t.__v==u.__v)){for(t.__v!=u.__v&&(h.props=b,h.state=h.__s,h.__d=!1),t.__e=u.__e,t.__k=u.__k,t.__k.some(function(n){n&&(n.__=t)}),$=0;$<h._sb.length;$++)h.__h.push(h._sb[$]);h._sb=[],h.__h.length&&e.push(h);break n}null!=h.componentWillUpdate&&h.componentWillUpdate(b,h.__s,M),S&&null!=h.componentDidUpdate&&h.__h.push(function(){h.componentDidUpdate(v,y,_)})}if(h.context=M,h.props=b,h.__P=n,h.__e=!1,P=l.__r,A=0,S){for(h.state=h.__s,h.__d=!1,P&&P(t),a=h.render(h.props,h.state,h.context),H=0;H<h._sb.length;H++)h.__h.push(h._sb[H]);h._sb=[]}else do{h.__d=!1,P&&P(t),a=h.render(h.props,h.state,h.context),h.state=h.__s}while(h.__d&&++A<25);h.state=h.__s,null!=h.getChildContext&&(i=w(w({},i),h.getChildContext())),S&&!p&&null!=h.getSnapshotBeforeUpdate&&(_=h.getSnapshotBeforeUpdate(v,y)),L=a,null!=a&&a.type===k&&null==a.key&&(L=N(a.props.children)),f=I(n,d(L)?L:[L],t,u,i,r,o,e,f,c,s),h.base=t.__e,t.__u&=-161,h.__h.length&&e.push(h),m&&(h.__E=h.__=null)}catch(n){if(t.__v=null,c||null!=o)if(n.then){for(t.__u|=c?160:128;f&&8==f.nodeType&&f.nextSibling;)f=f.nextSibling;o[o.indexOf(f)]=null,t.__e=f}else for(T=o.length;T--;)g(o[T]);else t.__e=u.__e,t.__k=u.__k;l.__e(n,t,u)}else null==o&&t.__v==u.__v?(t.__k=u.__k,t.__e=u.__e):f=t.__e=V(u.__e,t,u,i,r,o,e,c,s);return(a=l.diffed)&&a(t),128&t.__u?void 0:f}function z(n,t,u){for(var i=0;i<u.length;i++)q(u[i],u[++i],u[++i]);l.__c&&l.__c(t,n),n.some(function(t){try{n=t.__h,t.__h=[],n.some(function(n){n.call(t)})}catch(n){l.__e(n,t.__v)}})}function N(n){return"object"!=typeof n||null==n?n:d(n)?n.map(N):w({},n)}function V(t,u,i,r,o,e,f,c,s){var a,h,v,y,w,_,m,b=i.props,k=u.props,x=u.type;if("svg"==x?o="http://www.w3.org/2000/svg":"math"==x?o="http://www.w3.org/1998/Math/MathML":o||(o="http://www.w3.org/1999/xhtml"),null!=e)for(a=0;a<e.length;a++)if((w=e[a])&&"setAttribute"in w==!!x&&(x?w.localName==x:3==w.nodeType)){t=w,e[a]=null;break}if(null==t){if(null==x)return document.createTextNode(k);t=document.createElementNS(o,x,k.is&&k),c&&(l.__m&&l.__m(u,e),c=!1),e=null}if(null===x)b===k||c&&t.data===k||(t.data=k);else{if(e=e&&n.call(t.childNodes),b=i.props||p,!c&&null!=e)for(b={},a=0;a<t.attributes.length;a++)b[(w=t.attributes[a]).name]=w.value;for(a in b)if(w=b[a],"children"==a);else if("dangerouslySetInnerHTML"==a)v=w;else if(!(a in k)){if("value"==a&&"defaultValue"in k||"checked"==a&&"defaultChecked"in k)continue;j(t,a,null,w,o)}for(a in k)w=k[a],"children"==a?y=w:"dangerouslySetInnerHTML"==a?h=w:"value"==a?_=w:"checked"==a?m=w:c&&"function"!=typeof w||b[a]===w||j(t,a,w,b[a],o);if(h)c||v&&(h.__html===v.__html||h.__html===t.innerHTML)||(t.innerHTML=h.__html),u.__k=[];else if(v&&(t.innerHTML=""),I("template"===u.type?t.content:t,d(y)?y:[y],u,i,r,"foreignObject"==x?"http://www.w3.org/1999/xhtml":o,e,f,e?e[0]:i.__k&&S(i,0),c,s),null!=e)for(a=e.length;a--;)g(e[a]);c||(a="value","progress"==x&&null==_?t.removeAttribute("value"):void 0!==_&&(_!==t[a]||"progress"==x&&!_||"option"==x&&_!==b[a])&&j(t,a,_,b[a],o),a="checked",void 0!==m&&m!==t[a]&&j(t,a,m,b[a],o))}return t}function q(n,t,u){try{if("function"==typeof n){var i="function"==typeof n.__u;i&&n.__u(),i&&null==t||(n.__u=n(t))}else n.current=t}catch(n){l.__e(n,u)}}function B(n,t,u){var i,r;if(l.unmount&&l.unmount(n),(i=n.ref)&&(i.current&&i.current!==n.__e||q(i,null,t)),null!=(i=n.__c)){if(i.componentWillUnmount)try{i.componentWillUnmount()}catch(n){l.__e(n,t)}i.base=i.__P=null}if(i=n.__k)for(r=0;r<i.length;r++)i[r]&&B(i[r],t,u||"function"!=typeof n.type);u||g(n.__e),n.__c=n.__=n.__e=void 0}function D(n,l,t){return this.constructor(n,t)}function E(t,u,i){var r,o,e,f;u==document&&(u=document.documentElement),l.__&&l.__(t,u),o=(r="function"==typeof i)?null:i&&i.__k||u.__k,e=[],f=[],O(u,t=(!r&&i||u).__k=_(k,null,[t]),o||p,p,u.namespaceURI,!r&&i?[i]:o?null:u.firstChild?n.call(u.childNodes):null,e,!r&&i?i:o?o.__e:u.firstChild,r,f),z(e,t,f)}function G(n,l){E(n,l,G)}function J(l,t,u){var i,r,o,e,f=w({},l.props);for(o in l.type&&l.type.defaultProps&&(e=l.type.defaultProps),t)"key"==o?i=t[o]:"ref"==o?r=t[o]:f[o]=void 0===t[o]&&void 0!==e?e[o]:t[o];return arguments.length>2&&(f.children=arguments.length>3?n.call(arguments,2):u),m(l.type,f,i||l.key,r||l.ref,null)}function K(n){function l(n){var t,u;return this.getChildContext||(t=new Set,(u={})[l.__c]=this,this.getChildContext=function(){return u},this.componentWillUnmount=function(){t=null},this.shouldComponentUpdate=function(n){this.props.value!==n.value&&t.forEach(function(n){n.__e=!0,M(n)})},this.sub=function(n){t.add(n);var l=n.componentWillUnmount;n.componentWillUnmount=function(){t&&t.delete(n),l&&l.call(n)}}),n.children}return l.__c="__cC"+h++,l.__=n,l.Provider=l.__l=(l.Consumer=function(n,l){return n.children(l)}).contextType=l,l}n=v.slice,l={__e:function(n,l,t,u){for(var i,r,o;l=l.__;)if((i=l.__c)&&!i.__)try{if((r=i.constructor)&&null!=r.getDerivedStateFromError&&(i.setState(r.getDerivedStateFromError(n)),o=i.__d),null!=i.componentDidCatch&&(i.componentDidCatch(n,u||{}),o=i.__d),o)return i.__E=i}catch(l){n=l}throw n}},t=0,u=function(n){return null!=n&&null==n.constructor},x.prototype.setState=function(n,l){var t;t=null!=this.__s&&this.__s!==this.state?this.__s:this.__s=w({},this.state),"function"==typeof n&&(n=n(w({},t),this.props)),n&&w(t,n),null!=n&&this.__v&&(l&&this._sb.push(l),M(this))},x.prototype.forceUpdate=function(n){this.__v&&(this.__e=!0,n&&this.__h.push(n),M(this))},x.prototype.render=k,i=[],o="function"==typeof Promise?Promise.prototype.then.bind(Promise.resolve()):setTimeout,e=function(n,l){return n.__v.__b-l.__v.__b},$.__r=0,f=/(PointerCapture)$|Capture$/i,c=0,s=F(!1),a=F(!0),h=0;
 
 
-      /***/
-})
+/***/ })
 
-  /******/
-});
+/******/ });
 /************************************************************************/
 /******/ // The module cache
 /******/ var __webpack_module_cache__ = {};
-/******/
+/******/ 
 /******/ // The require function
 /******/ function __webpack_require__(moduleId) {
 /******/ 	// Check if module is in cache
 /******/ 	var cachedModule = __webpack_module_cache__[moduleId];
 /******/ 	if (cachedModule !== undefined) {
 /******/ 		return cachedModule.exports;
-    /******/
-}
+/******/ 	}
 /******/ 	// Create a new module (and put it into the cache)
 /******/ 	var module = __webpack_module_cache__[moduleId] = {
 /******/ 		// no module.id needed
 /******/ 		// no module.loaded needed
 /******/ 		exports: {}
-    /******/
-};
-/******/
+/******/ 	};
+/******/ 
 /******/ 	// Execute the module function
 /******/ 	__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/
+/******/ 
 /******/ 	// Return the exports of the module
 /******/ 	return module.exports;
-  /******/
-}
-/******/
+/******/ }
+/******/ 
 /************************************************************************/
 /******/ /* webpack/runtime/define property getters */
 /******/ (() => {
 /******/ 	// define getter functions for harmony exports
 /******/ 	__webpack_require__.d = (exports, definition) => {
-/******/ 		for (var key in definition) {
-/******/ 			if (__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 		for(var key in definition) {
+/******/ 			if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
 /******/ 				Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-        /******/
-}
-      /******/
-}
-    /******/
-};
-  /******/
-})();
-/******/
+/******/ 			}
+/******/ 		}
+/******/ 	};
+/******/ })();
+/******/ 
 /******/ /* webpack/runtime/hasOwnProperty shorthand */
 /******/ (() => {
 /******/ 	__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-  /******/
-})();
-/******/
+/******/ })();
+/******/ 
 /************************************************************************/
 var __webpack_exports__ = {};
 
@@ -102,12 +91,12 @@ __webpack_require__.d(__webpack_exports__, {
 // EXTERNAL MODULE: ./node_modules/preact/dist/preact.module.js
 var preact_module = __webpack_require__(622);
 ;// ./node_modules/preact/hooks/dist/hooks.module.js
-var hooks_module_t, r, hooks_module_u, i, hooks_module_o = 0, hooks_module_f = [], hooks_module_c = preact_module/* options */.fF, e = hooks_module_c.__b, a = hooks_module_c.__r, v = hooks_module_c.diffed, l = hooks_module_c.__c, m = hooks_module_c.unmount, s = hooks_module_c.__; function p(n, t) { hooks_module_c.__h && hooks_module_c.__h(r, n, hooks_module_o || t), hooks_module_o = 0; var u = r.__H || (r.__H = { __: [], __h: [] }); return n >= u.__.length && u.__.push({}), u.__[n] } function d(n) { return hooks_module_o = 1, h(D, n) } function h(n, u, i) { var o = p(hooks_module_t++, 2); if (o.t = n, !o.__c && (o.__ = [i ? i(u) : D(void 0, u), function (n) { var t = o.__N ? o.__N[0] : o.__[0], r = o.t(t, n); t !== r && (o.__N = [r, o.__[1]], o.__c.setState({})) }], o.__c = r, !r.__f)) { var f = function (n, t, r) { if (!o.__c.__H) return !0; var u = o.__c.__H.__.filter(function (n) { return !!n.__c }); if (u.every(function (n) { return !n.__N })) return !c || c.call(this, n, t, r); var i = o.__c.props !== n; return u.forEach(function (n) { if (n.__N) { var t = n.__[0]; n.__ = n.__N, n.__N = void 0, t !== n.__[0] && (i = !0) } }), c && c.call(this, n, t, r) || i }; r.__f = !0; var c = r.shouldComponentUpdate, e = r.componentWillUpdate; r.componentWillUpdate = function (n, t, r) { if (this.__e) { var u = c; c = void 0, f(n, t, r), c = u } e && e.call(this, n, t, r) }, r.shouldComponentUpdate = f } return o.__N || o.__ } function y(n, u) { var i = p(hooks_module_t++, 3); !hooks_module_c.__s && C(i.__H, u) && (i.__ = n, i.u = u, r.__H.__h.push(i)) } function _(n, u) { var i = p(hooks_module_t++, 4); !hooks_module_c.__s && C(i.__H, u) && (i.__ = n, i.u = u, r.__h.push(i)) } function A(n) { return hooks_module_o = 5, T(function () { return { current: n } }, []) } function F(n, t, r) { hooks_module_o = 6, _(function () { if ("function" == typeof n) { var r = n(t()); return function () { n(null), r && "function" == typeof r && r() } } if (n) return n.current = t(), function () { return n.current = null } }, null == r ? r : r.concat(n)) } function T(n, r) { var u = p(hooks_module_t++, 7); return C(u.__H, r) && (u.__ = n(), u.__H = r, u.__h = n), u.__ } function q(n, t) { return hooks_module_o = 8, T(function () { return n }, t) } function x(n) { var u = r.context[n.__c], i = p(hooks_module_t++, 9); return i.c = n, u ? (null == i.__ && (i.__ = !0, u.sub(r)), u.props.value) : n.__ } function P(n, t) { hooks_module_c.useDebugValue && hooks_module_c.useDebugValue(t ? t(n) : n) } function b(n) { var u = p(hooks_module_t++, 10), i = d(); return u.__ = n, r.componentDidCatch || (r.componentDidCatch = function (n, t) { u.__ && u.__(n, t), i[1](n) }), [i[0], function () { i[1](void 0) }] } function g() { var n = p(hooks_module_t++, 11); if (!n.__) { for (var u = r.__v; null !== u && !u.__m && null !== u.__;)u = u.__; var i = u.__m || (u.__m = [0, 0]); n.__ = "P" + i[0] + "-" + i[1]++ } return n.__ } function j() { for (var n; n = hooks_module_f.shift();)if (n.__P && n.__H) try { n.__H.__h.forEach(z), n.__H.__h.forEach(B), n.__H.__h = [] } catch (t) { n.__H.__h = [], hooks_module_c.__e(t, n.__v) } } hooks_module_c.__b = function (n) { r = null, e && e(n) }, hooks_module_c.__ = function (n, t) { n && t.__k && t.__k.__m && (n.__m = t.__k.__m), s && s(n, t) }, hooks_module_c.__r = function (n) { a && a(n), hooks_module_t = 0; var i = (r = n.__c).__H; i && (hooks_module_u === r ? (i.__h = [], r.__h = [], i.__.forEach(function (n) { n.__N && (n.__ = n.__N), n.u = n.__N = void 0 })) : (i.__h.forEach(z), i.__h.forEach(B), i.__h = [], hooks_module_t = 0)), hooks_module_u = r }, hooks_module_c.diffed = function (n) { v && v(n); var t = n.__c; t && t.__H && (t.__H.__h.length && (1 !== hooks_module_f.push(t) && i === hooks_module_c.requestAnimationFrame || ((i = hooks_module_c.requestAnimationFrame) || w)(j)), t.__H.__.forEach(function (n) { n.u && (n.__H = n.u), n.u = void 0 })), hooks_module_u = r = null }, hooks_module_c.__c = function (n, t) { t.some(function (n) { try { n.__h.forEach(z), n.__h = n.__h.filter(function (n) { return !n.__ || B(n) }) } catch (r) { t.some(function (n) { n.__h && (n.__h = []) }), t = [], hooks_module_c.__e(r, n.__v) } }), l && l(n, t) }, hooks_module_c.unmount = function (n) { m && m(n); var t, r = n.__c; r && r.__H && (r.__H.__.forEach(function (n) { try { z(n) } catch (n) { t = n } }), r.__H = void 0, t && hooks_module_c.__e(t, r.__v)) }; var k = "function" == typeof requestAnimationFrame; function w(n) { var t, r = function () { clearTimeout(u), k && cancelAnimationFrame(t), setTimeout(n) }, u = setTimeout(r, 100); k && (t = requestAnimationFrame(r)) } function z(n) { var t = r, u = n.__c; "function" == typeof u && (n.__c = void 0, u()), r = t } function B(n) { var t = r; n.__c = n.__(), r = t } function C(n, t) { return !n || n.length !== t.length || t.some(function (t, r) { return t !== n[r] }) } function D(n, t) { return "function" == typeof t ? t(n) : t }
+var hooks_module_t,r,hooks_module_u,i,hooks_module_o=0,hooks_module_f=[],hooks_module_c=preact_module/* options */.fF,e=hooks_module_c.__b,a=hooks_module_c.__r,v=hooks_module_c.diffed,l=hooks_module_c.__c,m=hooks_module_c.unmount,s=hooks_module_c.__;function p(n,t){hooks_module_c.__h&&hooks_module_c.__h(r,n,hooks_module_o||t),hooks_module_o=0;var u=r.__H||(r.__H={__:[],__h:[]});return n>=u.__.length&&u.__.push({}),u.__[n]}function d(n){return hooks_module_o=1,h(D,n)}function h(n,u,i){var o=p(hooks_module_t++,2);if(o.t=n,!o.__c&&(o.__=[i?i(u):D(void 0,u),function(n){var t=o.__N?o.__N[0]:o.__[0],r=o.t(t,n);t!==r&&(o.__N=[r,o.__[1]],o.__c.setState({}))}],o.__c=r,!r.__f)){var f=function(n,t,r){if(!o.__c.__H)return!0;var u=o.__c.__H.__.filter(function(n){return!!n.__c});if(u.every(function(n){return!n.__N}))return!c||c.call(this,n,t,r);var i=o.__c.props!==n;return u.forEach(function(n){if(n.__N){var t=n.__[0];n.__=n.__N,n.__N=void 0,t!==n.__[0]&&(i=!0)}}),c&&c.call(this,n,t,r)||i};r.__f=!0;var c=r.shouldComponentUpdate,e=r.componentWillUpdate;r.componentWillUpdate=function(n,t,r){if(this.__e){var u=c;c=void 0,f(n,t,r),c=u}e&&e.call(this,n,t,r)},r.shouldComponentUpdate=f}return o.__N||o.__}function y(n,u){var i=p(hooks_module_t++,3);!hooks_module_c.__s&&C(i.__H,u)&&(i.__=n,i.u=u,r.__H.__h.push(i))}function _(n,u){var i=p(hooks_module_t++,4);!hooks_module_c.__s&&C(i.__H,u)&&(i.__=n,i.u=u,r.__h.push(i))}function A(n){return hooks_module_o=5,T(function(){return{current:n}},[])}function F(n,t,r){hooks_module_o=6,_(function(){if("function"==typeof n){var r=n(t());return function(){n(null),r&&"function"==typeof r&&r()}}if(n)return n.current=t(),function(){return n.current=null}},null==r?r:r.concat(n))}function T(n,r){var u=p(hooks_module_t++,7);return C(u.__H,r)&&(u.__=n(),u.__H=r,u.__h=n),u.__}function q(n,t){return hooks_module_o=8,T(function(){return n},t)}function x(n){var u=r.context[n.__c],i=p(hooks_module_t++,9);return i.c=n,u?(null==i.__&&(i.__=!0,u.sub(r)),u.props.value):n.__}function P(n,t){hooks_module_c.useDebugValue&&hooks_module_c.useDebugValue(t?t(n):n)}function b(n){var u=p(hooks_module_t++,10),i=d();return u.__=n,r.componentDidCatch||(r.componentDidCatch=function(n,t){u.__&&u.__(n,t),i[1](n)}),[i[0],function(){i[1](void 0)}]}function g(){var n=p(hooks_module_t++,11);if(!n.__){for(var u=r.__v;null!==u&&!u.__m&&null!==u.__;)u=u.__;var i=u.__m||(u.__m=[0,0]);n.__="P"+i[0]+"-"+i[1]++}return n.__}function j(){for(var n;n=hooks_module_f.shift();)if(n.__P&&n.__H)try{n.__H.__h.forEach(z),n.__H.__h.forEach(B),n.__H.__h=[]}catch(t){n.__H.__h=[],hooks_module_c.__e(t,n.__v)}}hooks_module_c.__b=function(n){r=null,e&&e(n)},hooks_module_c.__=function(n,t){n&&t.__k&&t.__k.__m&&(n.__m=t.__k.__m),s&&s(n,t)},hooks_module_c.__r=function(n){a&&a(n),hooks_module_t=0;var i=(r=n.__c).__H;i&&(hooks_module_u===r?(i.__h=[],r.__h=[],i.__.forEach(function(n){n.__N&&(n.__=n.__N),n.u=n.__N=void 0})):(i.__h.forEach(z),i.__h.forEach(B),i.__h=[],hooks_module_t=0)),hooks_module_u=r},hooks_module_c.diffed=function(n){v&&v(n);var t=n.__c;t&&t.__H&&(t.__H.__h.length&&(1!==hooks_module_f.push(t)&&i===hooks_module_c.requestAnimationFrame||((i=hooks_module_c.requestAnimationFrame)||w)(j)),t.__H.__.forEach(function(n){n.u&&(n.__H=n.u),n.u=void 0})),hooks_module_u=r=null},hooks_module_c.__c=function(n,t){t.some(function(n){try{n.__h.forEach(z),n.__h=n.__h.filter(function(n){return!n.__||B(n)})}catch(r){t.some(function(n){n.__h&&(n.__h=[])}),t=[],hooks_module_c.__e(r,n.__v)}}),l&&l(n,t)},hooks_module_c.unmount=function(n){m&&m(n);var t,r=n.__c;r&&r.__H&&(r.__H.__.forEach(function(n){try{z(n)}catch(n){t=n}}),r.__H=void 0,t&&hooks_module_c.__e(t,r.__v))};var k="function"==typeof requestAnimationFrame;function w(n){var t,r=function(){clearTimeout(u),k&&cancelAnimationFrame(t),setTimeout(n)},u=setTimeout(r,100);k&&(t=requestAnimationFrame(r))}function z(n){var t=r,u=n.__c;"function"==typeof u&&(n.__c=void 0,u()),r=t}function B(n){var t=r;n.__c=n.__(),r=t}function C(n,t){return!n||n.length!==t.length||t.some(function(t,r){return t!==n[r]})}function D(n,t){return"function"==typeof t?t(n):t}
 
 ;// ./node_modules/@preact/signals-core/dist/signals-core.module.js
-var signals_core_module_i = Symbol.for("preact-signals"); function signals_core_module_t() { if (!(signals_core_module_s > 1)) { var i, t = !1; while (void 0 !== signals_core_module_h) { var r = signals_core_module_h; signals_core_module_h = void 0; signals_core_module_f++; while (void 0 !== r) { var o = r.o; r.o = void 0; r.f &= -3; if (!(8 & r.f) && signals_core_module_c(r)) try { r.c() } catch (r) { if (!t) { i = r; t = !0 } } r = o } } signals_core_module_f = 0; signals_core_module_s--; if (t) throw i } else signals_core_module_s-- } function signals_core_module_r(i) { if (signals_core_module_s > 0) return i(); signals_core_module_s++; try { return i() } finally { signals_core_module_t() } } var signals_core_module_o = void 0; function n(i) { var t = signals_core_module_o; signals_core_module_o = void 0; try { return i() } finally { signals_core_module_o = t } } var signals_core_module_h = void 0, signals_core_module_s = 0, signals_core_module_f = 0, signals_core_module_v = 0; function signals_core_module_e(i) { if (void 0 !== signals_core_module_o) { var t = i.n; if (void 0 === t || t.t !== signals_core_module_o) { t = { i: 0, S: i, p: signals_core_module_o.s, n: void 0, t: signals_core_module_o, e: void 0, x: void 0, r: t }; if (void 0 !== signals_core_module_o.s) signals_core_module_o.s.n = t; signals_core_module_o.s = t; i.n = t; if (32 & signals_core_module_o.f) i.S(t); return t } else if (-1 === t.i) { t.i = 0; if (void 0 !== t.n) { t.n.p = t.p; if (void 0 !== t.p) t.p.n = t.n; t.p = signals_core_module_o.s; t.n = void 0; signals_core_module_o.s.n = t; signals_core_module_o.s = t } return t } } } function signals_core_module_u(i) { this.v = i; this.i = 0; this.n = void 0; this.t = void 0 } signals_core_module_u.prototype.brand = signals_core_module_i; signals_core_module_u.prototype.h = function () { return !0 }; signals_core_module_u.prototype.S = function (i) { if (this.t !== i && void 0 === i.e) { i.x = this.t; if (void 0 !== this.t) this.t.e = i; this.t = i } }; signals_core_module_u.prototype.U = function (i) { if (void 0 !== this.t) { var t = i.e, r = i.x; if (void 0 !== t) { t.x = r; i.e = void 0 } if (void 0 !== r) { r.e = t; i.x = void 0 } if (i === this.t) this.t = r } }; signals_core_module_u.prototype.subscribe = function (i) { var t = this; return E(function () { var r = t.value, n = signals_core_module_o; signals_core_module_o = void 0; try { i(r) } finally { signals_core_module_o = n } }) }; signals_core_module_u.prototype.valueOf = function () { return this.value }; signals_core_module_u.prototype.toString = function () { return this.value + "" }; signals_core_module_u.prototype.toJSON = function () { return this.value }; signals_core_module_u.prototype.peek = function () { var i = signals_core_module_o; signals_core_module_o = void 0; try { return this.value } finally { signals_core_module_o = i } }; Object.defineProperty(signals_core_module_u.prototype, "value", { get: function () { var i = signals_core_module_e(this); if (void 0 !== i) i.i = this.i; return this.v }, set: function (i) { if (i !== this.v) { if (signals_core_module_f > 100) throw new Error("Cycle detected"); this.v = i; this.i++; signals_core_module_v++; signals_core_module_s++; try { for (var r = this.t; void 0 !== r; r = r.x)r.t.N() } finally { signals_core_module_t() } } } }); function signals_core_module_d(i) { return new signals_core_module_u(i) } function signals_core_module_c(i) { for (var t = i.s; void 0 !== t; t = t.n)if (t.S.i !== t.i || !t.S.h() || t.S.i !== t.i) return !0; return !1 } function signals_core_module_a(i) { for (var t = i.s; void 0 !== t; t = t.n) { var r = t.S.n; if (void 0 !== r) t.r = r; t.S.n = t; t.i = -1; if (void 0 === t.n) { i.s = t; break } } } function signals_core_module_l(i) { var t = i.s, r = void 0; while (void 0 !== t) { var o = t.p; if (-1 === t.i) { t.S.U(t); if (void 0 !== o) o.n = t.n; if (void 0 !== t.n) t.n.p = o } else r = t; t.S.n = t.r; if (void 0 !== t.r) t.r = void 0; t = o } i.s = r } function signals_core_module_y(i) { signals_core_module_u.call(this, void 0); this.x = i; this.s = void 0; this.g = signals_core_module_v - 1; this.f = 4 } (signals_core_module_y.prototype = new signals_core_module_u).h = function () { this.f &= -3; if (1 & this.f) return !1; if (32 == (36 & this.f)) return !0; this.f &= -5; if (this.g === signals_core_module_v) return !0; this.g = signals_core_module_v; this.f |= 1; if (this.i > 0 && !signals_core_module_c(this)) { this.f &= -2; return !0 } var i = signals_core_module_o; try { signals_core_module_a(this); signals_core_module_o = this; var t = this.x(); if (16 & this.f || this.v !== t || 0 === this.i) { this.v = t; this.f &= -17; this.i++ } } catch (i) { this.v = i; this.f |= 16; this.i++ } signals_core_module_o = i; signals_core_module_l(this); this.f &= -2; return !0 }; signals_core_module_y.prototype.S = function (i) { if (void 0 === this.t) { this.f |= 36; for (var t = this.s; void 0 !== t; t = t.n)t.S.S(t) } signals_core_module_u.prototype.S.call(this, i) }; signals_core_module_y.prototype.U = function (i) { if (void 0 !== this.t) { signals_core_module_u.prototype.U.call(this, i); if (void 0 === this.t) { this.f &= -33; for (var t = this.s; void 0 !== t; t = t.n)t.S.U(t) } } }; signals_core_module_y.prototype.N = function () { if (!(2 & this.f)) { this.f |= 6; for (var i = this.t; void 0 !== i; i = i.x)i.t.N() } }; Object.defineProperty(signals_core_module_y.prototype, "value", { get: function () { if (1 & this.f) throw new Error("Cycle detected"); var i = signals_core_module_e(this); this.h(); if (void 0 !== i) i.i = this.i; if (16 & this.f) throw this.v; return this.v } }); function signals_core_module_w(i) { return new signals_core_module_y(i) } function signals_core_module_(i) { var r = i.u; i.u = void 0; if ("function" == typeof r) { signals_core_module_s++; var n = signals_core_module_o; signals_core_module_o = void 0; try { r() } catch (t) { i.f &= -2; i.f |= 8; signals_core_module_g(i); throw t } finally { signals_core_module_o = n; signals_core_module_t() } } } function signals_core_module_g(i) { for (var t = i.s; void 0 !== t; t = t.n)t.S.U(t); i.x = void 0; i.s = void 0; signals_core_module_(i) } function signals_core_module_p(i) { if (signals_core_module_o !== this) throw new Error("Out-of-order effect"); signals_core_module_l(this); signals_core_module_o = i; this.f &= -2; if (8 & this.f) signals_core_module_g(this); signals_core_module_t() } function signals_core_module_b(i) { this.x = i; this.u = void 0; this.s = void 0; this.o = void 0; this.f = 32 } signals_core_module_b.prototype.c = function () { var i = this.S(); try { if (8 & this.f) return; if (void 0 === this.x) return; var t = this.x(); if ("function" == typeof t) this.u = t } finally { i() } }; signals_core_module_b.prototype.S = function () { if (1 & this.f) throw new Error("Cycle detected"); this.f |= 1; this.f &= -9; signals_core_module_(this); signals_core_module_a(this); signals_core_module_s++; var i = signals_core_module_o; signals_core_module_o = this; return signals_core_module_p.bind(this, i) }; signals_core_module_b.prototype.N = function () { if (!(2 & this.f)) { this.f |= 2; this.o = signals_core_module_h; signals_core_module_h = this } }; signals_core_module_b.prototype.d = function () { this.f |= 8; if (!(1 & this.f)) signals_core_module_g(this) }; function E(i) { var t = new signals_core_module_b(i); try { t.c() } catch (i) { t.d(); throw i } return t.d.bind(t) }
+var signals_core_module_i=Symbol.for("preact-signals");function signals_core_module_t(){if(!(signals_core_module_s>1)){var i,t=!1;while(void 0!==signals_core_module_h){var r=signals_core_module_h;signals_core_module_h=void 0;signals_core_module_f++;while(void 0!==r){var o=r.o;r.o=void 0;r.f&=-3;if(!(8&r.f)&&signals_core_module_c(r))try{r.c()}catch(r){if(!t){i=r;t=!0}}r=o}}signals_core_module_f=0;signals_core_module_s--;if(t)throw i}else signals_core_module_s--}function signals_core_module_r(i){if(signals_core_module_s>0)return i();signals_core_module_s++;try{return i()}finally{signals_core_module_t()}}var signals_core_module_o=void 0;function n(i){var t=signals_core_module_o;signals_core_module_o=void 0;try{return i()}finally{signals_core_module_o=t}}var signals_core_module_h=void 0,signals_core_module_s=0,signals_core_module_f=0,signals_core_module_v=0;function signals_core_module_e(i){if(void 0!==signals_core_module_o){var t=i.n;if(void 0===t||t.t!==signals_core_module_o){t={i:0,S:i,p:signals_core_module_o.s,n:void 0,t:signals_core_module_o,e:void 0,x:void 0,r:t};if(void 0!==signals_core_module_o.s)signals_core_module_o.s.n=t;signals_core_module_o.s=t;i.n=t;if(32&signals_core_module_o.f)i.S(t);return t}else if(-1===t.i){t.i=0;if(void 0!==t.n){t.n.p=t.p;if(void 0!==t.p)t.p.n=t.n;t.p=signals_core_module_o.s;t.n=void 0;signals_core_module_o.s.n=t;signals_core_module_o.s=t}return t}}}function signals_core_module_u(i){this.v=i;this.i=0;this.n=void 0;this.t=void 0}signals_core_module_u.prototype.brand=signals_core_module_i;signals_core_module_u.prototype.h=function(){return!0};signals_core_module_u.prototype.S=function(i){if(this.t!==i&&void 0===i.e){i.x=this.t;if(void 0!==this.t)this.t.e=i;this.t=i}};signals_core_module_u.prototype.U=function(i){if(void 0!==this.t){var t=i.e,r=i.x;if(void 0!==t){t.x=r;i.e=void 0}if(void 0!==r){r.e=t;i.x=void 0}if(i===this.t)this.t=r}};signals_core_module_u.prototype.subscribe=function(i){var t=this;return E(function(){var r=t.value,n=signals_core_module_o;signals_core_module_o=void 0;try{i(r)}finally{signals_core_module_o=n}})};signals_core_module_u.prototype.valueOf=function(){return this.value};signals_core_module_u.prototype.toString=function(){return this.value+""};signals_core_module_u.prototype.toJSON=function(){return this.value};signals_core_module_u.prototype.peek=function(){var i=signals_core_module_o;signals_core_module_o=void 0;try{return this.value}finally{signals_core_module_o=i}};Object.defineProperty(signals_core_module_u.prototype,"value",{get:function(){var i=signals_core_module_e(this);if(void 0!==i)i.i=this.i;return this.v},set:function(i){if(i!==this.v){if(signals_core_module_f>100)throw new Error("Cycle detected");this.v=i;this.i++;signals_core_module_v++;signals_core_module_s++;try{for(var r=this.t;void 0!==r;r=r.x)r.t.N()}finally{signals_core_module_t()}}}});function signals_core_module_d(i){return new signals_core_module_u(i)}function signals_core_module_c(i){for(var t=i.s;void 0!==t;t=t.n)if(t.S.i!==t.i||!t.S.h()||t.S.i!==t.i)return!0;return!1}function signals_core_module_a(i){for(var t=i.s;void 0!==t;t=t.n){var r=t.S.n;if(void 0!==r)t.r=r;t.S.n=t;t.i=-1;if(void 0===t.n){i.s=t;break}}}function signals_core_module_l(i){var t=i.s,r=void 0;while(void 0!==t){var o=t.p;if(-1===t.i){t.S.U(t);if(void 0!==o)o.n=t.n;if(void 0!==t.n)t.n.p=o}else r=t;t.S.n=t.r;if(void 0!==t.r)t.r=void 0;t=o}i.s=r}function signals_core_module_y(i){signals_core_module_u.call(this,void 0);this.x=i;this.s=void 0;this.g=signals_core_module_v-1;this.f=4}(signals_core_module_y.prototype=new signals_core_module_u).h=function(){this.f&=-3;if(1&this.f)return!1;if(32==(36&this.f))return!0;this.f&=-5;if(this.g===signals_core_module_v)return!0;this.g=signals_core_module_v;this.f|=1;if(this.i>0&&!signals_core_module_c(this)){this.f&=-2;return!0}var i=signals_core_module_o;try{signals_core_module_a(this);signals_core_module_o=this;var t=this.x();if(16&this.f||this.v!==t||0===this.i){this.v=t;this.f&=-17;this.i++}}catch(i){this.v=i;this.f|=16;this.i++}signals_core_module_o=i;signals_core_module_l(this);this.f&=-2;return!0};signals_core_module_y.prototype.S=function(i){if(void 0===this.t){this.f|=36;for(var t=this.s;void 0!==t;t=t.n)t.S.S(t)}signals_core_module_u.prototype.S.call(this,i)};signals_core_module_y.prototype.U=function(i){if(void 0!==this.t){signals_core_module_u.prototype.U.call(this,i);if(void 0===this.t){this.f&=-33;for(var t=this.s;void 0!==t;t=t.n)t.S.U(t)}}};signals_core_module_y.prototype.N=function(){if(!(2&this.f)){this.f|=6;for(var i=this.t;void 0!==i;i=i.x)i.t.N()}};Object.defineProperty(signals_core_module_y.prototype,"value",{get:function(){if(1&this.f)throw new Error("Cycle detected");var i=signals_core_module_e(this);this.h();if(void 0!==i)i.i=this.i;if(16&this.f)throw this.v;return this.v}});function signals_core_module_w(i){return new signals_core_module_y(i)}function signals_core_module_(i){var r=i.u;i.u=void 0;if("function"==typeof r){signals_core_module_s++;var n=signals_core_module_o;signals_core_module_o=void 0;try{r()}catch(t){i.f&=-2;i.f|=8;signals_core_module_g(i);throw t}finally{signals_core_module_o=n;signals_core_module_t()}}}function signals_core_module_g(i){for(var t=i.s;void 0!==t;t=t.n)t.S.U(t);i.x=void 0;i.s=void 0;signals_core_module_(i)}function signals_core_module_p(i){if(signals_core_module_o!==this)throw new Error("Out-of-order effect");signals_core_module_l(this);signals_core_module_o=i;this.f&=-2;if(8&this.f)signals_core_module_g(this);signals_core_module_t()}function signals_core_module_b(i){this.x=i;this.u=void 0;this.s=void 0;this.o=void 0;this.f=32}signals_core_module_b.prototype.c=function(){var i=this.S();try{if(8&this.f)return;if(void 0===this.x)return;var t=this.x();if("function"==typeof t)this.u=t}finally{i()}};signals_core_module_b.prototype.S=function(){if(1&this.f)throw new Error("Cycle detected");this.f|=1;this.f&=-9;signals_core_module_(this);signals_core_module_a(this);signals_core_module_s++;var i=signals_core_module_o;signals_core_module_o=this;return signals_core_module_p.bind(this,i)};signals_core_module_b.prototype.N=function(){if(!(2&this.f)){this.f|=2;this.o=signals_core_module_h;signals_core_module_h=this}};signals_core_module_b.prototype.d=function(){this.f|=8;if(!(1&this.f))signals_core_module_g(this)};function E(i){var t=new signals_core_module_b(i);try{t.c()}catch(i){t.d();throw i}return t.d.bind(t)}
 ;// ./node_modules/@preact/signals/dist/signals.module.js
-var signals_module_v, signals_module_s; function signals_module_l(i, n) { preact_module/* options */.fF[i] = n.bind(null, preact_module/* options */.fF[i] || function () { }) } function signals_module_d(i) { if (signals_module_s) signals_module_s(); signals_module_s = i && i.S() } function signals_module_h(i) { var r = this, f = i.data, o = useSignal(f); o.value = f; var e = T(function () { var i = r.__v; while (i = i.__) if (i.__c) { i.__c.__$f |= 4; break } r.__$u.c = function () { var i, t = r.__$u.S(), f = e.value; t(); if ((0, preact_module/* isValidElement */.zO)(f) || 3 !== (null == (i = r.base) ? void 0 : i.nodeType)) { r.__$f |= 1; r.setState({}) } else r.base.data = f }; return signals_core_module_w(function () { var i = o.value.value; return 0 === i ? 0 : !0 === i ? "" : i || "" }) }, []); return e.value } signals_module_h.displayName = "_st"; Object.defineProperties(signals_core_module_u.prototype, { constructor: { configurable: !0, value: void 0 }, type: { configurable: !0, value: signals_module_h }, props: { configurable: !0, get: function () { return { data: this } } }, __b: { configurable: !0, value: 1 } }); signals_module_l("__b", function (i, r) { if ("string" == typeof r.type) { var n, t = r.props; for (var f in t) if ("children" !== f) { var o = t[f]; if (o instanceof signals_core_module_u) { if (!n) r.__np = n = {}; n[f] = o; t[f] = o.peek() } } } i(r) }); signals_module_l("__r", function (i, r) { signals_module_d(); var n, t = r.__c; if (t) { t.__$f &= -2; if (void 0 === (n = t.__$u)) t.__$u = n = function (i) { var r; E(function () { r = this }); r.c = function () { t.__$f |= 1; t.setState({}) }; return r }() } signals_module_v = t; signals_module_d(n); i(r) }); signals_module_l("__e", function (i, r, n, t) { signals_module_d(); signals_module_v = void 0; i(r, n, t) }); signals_module_l("diffed", function (i, r) { signals_module_d(); signals_module_v = void 0; var n; if ("string" == typeof r.type && (n = r.__e)) { var t = r.__np, f = r.props; if (t) { var o = n.U; if (o) for (var e in o) { var u = o[e]; if (void 0 !== u && !(e in t)) { u.d(); o[e] = void 0 } } else n.U = o = {}; for (var a in t) { var c = o[a], s = t[a]; if (void 0 === c) { c = signals_module_p(n, a, s, f); o[a] = c } else c.o(s, f) } } } i(r) }); function signals_module_p(i, r, n, t) { var f = r in i && void 0 === i.ownerSVGElement, o = signals_core_module_d(n); return { o: function (i, r) { o.value = i; t = r }, d: E(function () { var n = o.value.value; if (t[r] !== n) { t[r] = n; if (f) i[r] = n; else if (n) i.setAttribute(r, n); else i.removeAttribute(r) } }) } } signals_module_l("unmount", function (i, r) { if ("string" == typeof r.type) { var n = r.__e; if (n) { var t = n.U; if (t) { n.U = void 0; for (var f in t) { var o = t[f]; if (o) o.d() } } } } else { var e = r.__c; if (e) { var u = e.__$u; if (u) { e.__$u = void 0; u.d() } } } i(r) }); signals_module_l("__h", function (i, r, n, t) { if (t < 3 || 9 === t) r.__$f |= 2; i(r, n, t) }); preact_module/* Component */.uA.prototype.shouldComponentUpdate = function (i, r) { var n = this.__$u, t = n && void 0 !== n.s; for (var f in r) return !0; if (this.__f || "boolean" == typeof this.u && !0 === this.u) { if (!(t || 2 & this.__$f || 4 & this.__$f)) return !0; if (1 & this.__$f) return !0 } else { if (!(t || 4 & this.__$f)) return !0; if (3 & this.__$f) return !0 } for (var o in i) if ("__source" !== o && i[o] !== this.props[o]) return !0; for (var e in this.props) if (!(e in i)) return !0; return !1 }; function useSignal(i) { return T(function () { return signals_core_module_d(i) }, []) } function useComputed(i) { var r = f(i); r.current = i; signals_module_v.__$f |= 4; return t(function () { return u(function () { return r.current() }) }, []) } function useSignalEffect(i) { var r = f(i); r.current = i; o(function () { return c(function () { return r.current() }) }, []) }
+var signals_module_v,signals_module_s;function signals_module_l(i,n){preact_module/* options */.fF[i]=n.bind(null,preact_module/* options */.fF[i]||function(){})}function signals_module_d(i){if(signals_module_s)signals_module_s();signals_module_s=i&&i.S()}function signals_module_h(i){var r=this,f=i.data,o=useSignal(f);o.value=f;var e=T(function(){var i=r.__v;while(i=i.__)if(i.__c){i.__c.__$f|=4;break}r.__$u.c=function(){var i,t=r.__$u.S(),f=e.value;t();if((0,preact_module/* isValidElement */.zO)(f)||3!==(null==(i=r.base)?void 0:i.nodeType)){r.__$f|=1;r.setState({})}else r.base.data=f};return signals_core_module_w(function(){var i=o.value.value;return 0===i?0:!0===i?"":i||""})},[]);return e.value}signals_module_h.displayName="_st";Object.defineProperties(signals_core_module_u.prototype,{constructor:{configurable:!0,value:void 0},type:{configurable:!0,value:signals_module_h},props:{configurable:!0,get:function(){return{data:this}}},__b:{configurable:!0,value:1}});signals_module_l("__b",function(i,r){if("string"==typeof r.type){var n,t=r.props;for(var f in t)if("children"!==f){var o=t[f];if(o instanceof signals_core_module_u){if(!n)r.__np=n={};n[f]=o;t[f]=o.peek()}}}i(r)});signals_module_l("__r",function(i,r){signals_module_d();var n,t=r.__c;if(t){t.__$f&=-2;if(void 0===(n=t.__$u))t.__$u=n=function(i){var r;E(function(){r=this});r.c=function(){t.__$f|=1;t.setState({})};return r}()}signals_module_v=t;signals_module_d(n);i(r)});signals_module_l("__e",function(i,r,n,t){signals_module_d();signals_module_v=void 0;i(r,n,t)});signals_module_l("diffed",function(i,r){signals_module_d();signals_module_v=void 0;var n;if("string"==typeof r.type&&(n=r.__e)){var t=r.__np,f=r.props;if(t){var o=n.U;if(o)for(var e in o){var u=o[e];if(void 0!==u&&!(e in t)){u.d();o[e]=void 0}}else n.U=o={};for(var a in t){var c=o[a],s=t[a];if(void 0===c){c=signals_module_p(n,a,s,f);o[a]=c}else c.o(s,f)}}}i(r)});function signals_module_p(i,r,n,t){var f=r in i&&void 0===i.ownerSVGElement,o=signals_core_module_d(n);return{o:function(i,r){o.value=i;t=r},d:E(function(){var n=o.value.value;if(t[r]!==n){t[r]=n;if(f)i[r]=n;else if(n)i.setAttribute(r,n);else i.removeAttribute(r)}})}}signals_module_l("unmount",function(i,r){if("string"==typeof r.type){var n=r.__e;if(n){var t=n.U;if(t){n.U=void 0;for(var f in t){var o=t[f];if(o)o.d()}}}}else{var e=r.__c;if(e){var u=e.__$u;if(u){e.__$u=void 0;u.d()}}}i(r)});signals_module_l("__h",function(i,r,n,t){if(t<3||9===t)r.__$f|=2;i(r,n,t)});preact_module/* Component */.uA.prototype.shouldComponentUpdate=function(i,r){var n=this.__$u,t=n&&void 0!==n.s;for(var f in r)return!0;if(this.__f||"boolean"==typeof this.u&&!0===this.u){if(!(t||2&this.__$f||4&this.__$f))return!0;if(1&this.__$f)return!0}else{if(!(t||4&this.__$f))return!0;if(3&this.__$f)return!0}for(var o in i)if("__source"!==o&&i[o]!==this.props[o])return!0;for(var e in this.props)if(!(e in i))return!0;return!1};function useSignal(i){return T(function(){return signals_core_module_d(i)},[])}function useComputed(i){var r=f(i);r.current=i;signals_module_v.__$f|=4;return t(function(){return u(function(){return r.current()})},[])}function useSignalEffect(i){var r=f(i);r.current=i;o(function(){return c(function(){return r.current()})},[])}
 ;// ./node_modules/@wordpress/interactivity/build-module/namespaces.js
 const namespaceStack = [];
 const getNamespace = () => namespaceStack.slice(-1)[0];
@@ -290,7 +279,7 @@ const splitTask = typeof window.scheduler?.yield === 'function' ? window.schedul
  * Using the mangled properties:
  * this.c: this._callback
  * this.x: this._compute
- * http://github.com/preactjs/signals/blob/main/mangle.json
+ * https://github.com/preactjs/signals/blob/main/mangle.json
  *
  * @param compute The function that computes the value to be flushed.
  * @param notify  The function that notifies listeners when the value is flushed.
@@ -314,7 +303,7 @@ function createFlusher(compute, notify) {
  * Custom hook that executes a callback function whenever a signal is triggered.
  * Version of `useSignalEffect` with a `useEffect`-like execution. This hook
  * implementation comes from this PR, but we added short-cirtuiting to avoid
- * infinite loops: http://github.com/preactjs/signals/pull/290
+ * infinite loops: https://github.com/preactjs/signals/pull/290
  *
  * @param callback The callback function to be executed.
  */
@@ -340,7 +329,7 @@ function utils_useSignalEffect(callback) {
  * available inside hook callbacks.
  *
  * Asynchronous functions should use generators that yield promises instead of awaiting them.
- * See the documentation for details: http://developer.wordpress.org/block-editor/reference-guides/packages/packages-interactivity/packages-interactivity-api-reference/#the-store
+ * See the documentation for details: https://developer.wordpress.org/block-editor/reference-guides/packages/packages-interactivity/packages-interactivity-api-reference/#the-store
  *
  * @param func The passed function.
  * @return The wrapped function.
@@ -503,7 +492,7 @@ function useMemo(factory, inputs) {
 /**
  * Creates a root fragment by replacing a node or an array of nodes in a parent element.
  * For wrapperless hydration.
- * See http://gist.github.com/developit/f4c67a2ede71dc2fab7f357f39cff28c
+ * See https://gist.github.com/developit/f4c67a2ede71dc2fab7f357f39cff28c
  *
  * @param parent      The parent element where the nodes will be replaced.
  * @param replaceNode The node or array of nodes to replace in the parent element.
@@ -1435,13 +1424,13 @@ function store(namespace, {
 const parseServerData = (dom = document) => {
   var _dom$getElementById;
   const jsonDataScriptTag = // Preferred Script Module data passing form
-    (_dom$getElementById = dom.getElementById('wp-script-module-data-@wordpress/interactivity')) !== null && _dom$getElementById !== void 0 ? _dom$getElementById :
-      // Legacy form
-      dom.getElementById('wp-interactivity-data');
+  (_dom$getElementById = dom.getElementById('wp-script-module-data-@wordpress/interactivity')) !== null && _dom$getElementById !== void 0 ? _dom$getElementById :
+  // Legacy form
+  dom.getElementById('wp-interactivity-data');
   if (jsonDataScriptTag?.textContent) {
     try {
       return JSON.parse(jsonDataScriptTag.textContent);
-    } catch { }
+    } catch {}
   }
   return {};
 };
@@ -1488,7 +1477,7 @@ function isDefaultDirectiveSuffix(entry) {
   return entry.suffix === null;
 }
 // Main context.
-const context = (0, preact_module/* createContext */.q6)({
+const context = (0,preact_module/* createContext */.q6)({
   client: {},
   server: {}
 });
@@ -1595,50 +1584,50 @@ const resolve = (path, namespace) => {
   try {
     // TODO: Support lazy/dynamically initialized stores
     return path.split('.').reduce((acc, key) => acc[key], current);
-  } catch (e) { }
+  } catch (e) {}
 };
 
 // Generate the evaluate function.
 const getEvaluate = ({
   scope
 }) =>
-  // TODO: When removing the temporarily remaining `value( ...args )` call below, remove the `...args` parameter too.
-  (entry, ...args) => {
-    let {
-      value: path,
-      namespace
-    } = entry;
-    if (typeof path !== 'string') {
-      throw new Error('The `value` prop should be a string path');
-    }
-    // If path starts with !, remove it and save a flag.
-    const hasNegationOperator = path[0] === '!' && !!(path = path.slice(1));
-    setScope(scope);
-    const value = resolve(path, namespace);
-    // Functions are returned without invoking them.
-    if (typeof value === 'function') {
-      // Except if they have a negation operator present, for backward compatibility.
-      // This pattern is strongly discouraged and deprecated, and it will be removed in a near future release.
-      // TODO: Remove this condition to effectively ignore negation operator when provided with a function.
-      if (hasNegationOperator) {
-        warn('Using a function with a negation operator is deprecated and will stop working in WordPress 6.9. Please use derived state instead.');
-        const functionResult = !value(...args);
-        resetScope();
-        return functionResult;
-      }
-      // Reset scope before return and wrap the function so it will still run within the correct scope.
+// TODO: When removing the temporarily remaining `value( ...args )` call below, remove the `...args` parameter too.
+(entry, ...args) => {
+  let {
+    value: path,
+    namespace
+  } = entry;
+  if (typeof path !== 'string') {
+    throw new Error('The `value` prop should be a string path');
+  }
+  // If path starts with !, remove it and save a flag.
+  const hasNegationOperator = path[0] === '!' && !!(path = path.slice(1));
+  setScope(scope);
+  const value = resolve(path, namespace);
+  // Functions are returned without invoking them.
+  if (typeof value === 'function') {
+    // Except if they have a negation operator present, for backward compatibility.
+    // This pattern is strongly discouraged and deprecated, and it will be removed in a near future release.
+    // TODO: Remove this condition to effectively ignore negation operator when provided with a function.
+    if (hasNegationOperator) {
+      warn('Using a function with a negation operator is deprecated and will stop working in WordPress 6.9. Please use derived state instead.');
+      const functionResult = !value(...args);
       resetScope();
-      return (...functionArgs) => {
-        setScope(scope);
-        const functionResult = value(...functionArgs);
-        resetScope();
-        return functionResult;
-      };
+      return functionResult;
     }
-    const result = value;
+    // Reset scope before return and wrap the function so it will still run within the correct scope.
     resetScope();
-    return hasNegationOperator ? !result : result;
-  };
+    return (...functionArgs) => {
+      setScope(scope);
+      const functionResult = value(...functionArgs);
+      resetScope();
+      return functionResult;
+    };
+  }
+  const result = value;
+  resetScope();
+  return hasNegationOperator ? !result : result;
+};
 
 // Separate directives by priority. The resulting array contains objects
 // of directives grouped by same priority, and sorted in ascending order.
@@ -1680,13 +1669,13 @@ const Directives = ({
 
   // Create a fresh copy of the vnode element and add the props to the scope,
   // named as attributes (HTML Attributes).
-  element = (0, preact_module/* cloneElement */.Ob)(element, {
+  element = (0,preact_module/* cloneElement */.Ob)(element, {
     ref: scope.ref
   });
   scope.attributes = element.props;
 
   // Recursively render the wrapper for the next priority level.
-  const children = nextPriorityLevels.length > 0 ? (0, preact_module.h)(Directives, {
+  const children = nextPriorityLevels.length > 0 ? (0,preact_module.h)(Directives, {
     directives,
     priorityLevels: nextPriorityLevels,
     element,
@@ -1732,7 +1721,7 @@ preact_module/* options */.fF.vnode = vnode => {
         priorityLevels,
         originalProps: props,
         type: vnode.type,
-        element: (0, preact_module.h)(vnode.type, props),
+        element: (0,preact_module.h)(vnode.type, props),
         top: true
       };
       vnode.type = Directives;
@@ -1787,7 +1776,7 @@ function deepClone(source) {
  * the future this will be changed and result in an error. The current temporary behavior allows implementers to update
  * their relevant actions to use `withSyncEvent()`.
  *
- * For additional context, see http://github.com/WordPress/gutenberg/issues/64944.
+ * For additional context, see https://github.com/WordPress/gutenberg/issues/64944.
  *
  * @param event Event object.
  * @return Proxied event object.
@@ -1825,7 +1814,7 @@ const empty = ' ';
  * Convert a css style string into a object.
  *
  * Made by Cristian Bote (@cristianbote) for Goober.
- * http://unpkg.com/browse/goober@2.1.13/src/core/astish.js
+ * https://unpkg.com/browse/goober@2.1.13/src/core/astish.js
  *
  * @param val CSS string.
  * @return CSS object.
@@ -1958,7 +1947,7 @@ const getGlobalAsyncEventDirective = type => {
       }
       return result;
     }, [defaultEntry, inheritedClient, inheritedServer]);
-    return (0, preact_module.h)(Provider, {
+    return (0,preact_module.h)(Provider, {
       value: contextStack
     }, children);
   }, {
@@ -1975,12 +1964,12 @@ const getGlobalAsyncEventDirective = type => {
     watch.forEach(entry => {
       useWatch(() => {
         let start;
-        if (false) { }
+        if (false) {}
         let result = evaluate(entry);
         if (typeof result === 'function') {
           result = result();
         }
-        if (false) { }
+        if (false) {}
         return result;
       });
     });
@@ -1997,12 +1986,12 @@ const getGlobalAsyncEventDirective = type => {
       // TODO: Replace with useEffect to prevent unneeded scopes.
       useInit(() => {
         let start;
-        if (false) { }
+        if (false) {}
         let result = evaluate(entry);
         if (typeof result === 'function') {
           result = result();
         }
-        if (false) { }
+        if (false) {}
         return result;
       });
     });
@@ -2032,7 +2021,7 @@ const getGlobalAsyncEventDirective = type => {
             existingHandler(event);
           }
           let start;
-          if (false) { }
+          if (false) {}
           const result = evaluate(entry);
           if (typeof result === 'function') {
             if (!result?.sync) {
@@ -2040,7 +2029,7 @@ const getGlobalAsyncEventDirective = type => {
             }
             result(event);
           }
-          if (false) { }
+          if (false) {}
         });
       };
     });
@@ -2190,7 +2179,7 @@ const getGlobalAsyncEventDirective = type => {
         /*
          * We set the value directly to the corresponding HTMLElement instance
          * property excluding the following special cases. We follow Preact's
-         * logic: http://github.com/preactjs/preact/blob/ea49f7a0f9d1ff2c98c0bdd66aa0cbc583055246/src/diff/props.js#L110-L129
+         * logic: https://github.com/preactjs/preact/blob/ea49f7a0f9d1ff2c98c0bdd66aa0cbc583055246/src/diff/props.js#L110-L129
          */
         if (attribute === 'style') {
           if (typeof result === 'string') {
@@ -2198,28 +2187,28 @@ const getGlobalAsyncEventDirective = type => {
           }
           return;
         } else if (attribute !== 'width' && attribute !== 'height' && attribute !== 'href' && attribute !== 'list' && attribute !== 'form' &&
-          /*
-           * The value for `tabindex` follows the parsing rules for an
-           * integer. If that fails, or if the attribute isn't present, then
-           * the browsers should "follow platform conventions to determine if
-           * the element should be considered as a focusable area",
-           * practically meaning that most elements get a default of `-1` (not
-           * focusable), but several also get a default of `0` (focusable in
-           * order after all elements with a positive `tabindex` value).
-           *
-           * @see http://html.spec.whatwg.org/#tabindex-value
-           */
-          attribute !== 'tabIndex' && attribute !== 'download' && attribute !== 'rowSpan' && attribute !== 'colSpan' && attribute !== 'role' && attribute in el) {
+        /*
+         * The value for `tabindex` follows the parsing rules for an
+         * integer. If that fails, or if the attribute isn't present, then
+         * the browsers should "follow platform conventions to determine if
+         * the element should be considered as a focusable area",
+         * practically meaning that most elements get a default of `-1` (not
+         * focusable), but several also get a default of `0` (focusable in
+         * order after all elements with a positive `tabindex` value).
+         *
+         * @see https://html.spec.whatwg.org/#tabindex-value
+         */
+        attribute !== 'tabIndex' && attribute !== 'download' && attribute !== 'rowSpan' && attribute !== 'colSpan' && attribute !== 'role' && attribute in el) {
           try {
             el[attribute] = result === null || result === undefined ? '' : result;
             return;
-          } catch (err) { }
+          } catch (err) {}
         }
         /*
          * aria- and data- attributes have no boolean representation.
          * A `false` value is different from the attribute not being
          * present, so we can't remove it.
-         * We follow Preact's logic: http://github.com/preactjs/preact/blob/ea49f7a0f9d1ff2c98c0bdd66aa0cbc583055246/src/diff/props.js#L131C24-L136
+         * We follow Preact's logic: https://github.com/preactjs/preact/blob/ea49f7a0f9d1ff2c98c0bdd66aa0cbc583055246/src/diff/props.js#L131C24-L136
          */
         if (result !== null && result !== undefined && (result !== false || attribute[4] === '-')) {
           el.setAttribute(attribute, result);
@@ -2242,7 +2231,7 @@ const getGlobalAsyncEventDirective = type => {
   }) => {
     // Preserve the initial inner HTML.
     const cached = T(() => innerHTML, []);
-    return (0, preact_module.h)(Type, {
+    return (0,preact_module.h)(Type, {
       dangerouslySetInnerHTML: {
         __html: cached
       },
@@ -2342,7 +2331,7 @@ const getGlobalAsyncEventDirective = type => {
       const key = eachKey ? getEvaluate({
         scope
       })(eachKey[0]) : item;
-      result.push((0, preact_module.h)(Provider, {
+      result.push((0,preact_module.h)(Provider, {
         value: mergedContext,
         key
       }, element.props.content));
@@ -2381,15 +2370,15 @@ const isObject = item => Boolean(item && typeof item === 'object' && item.constr
 
 // Regular expression for directive parsing.
 const directiveParser = new RegExp(`^data-${directivePrefix}-` +
-  // ${p} must be a prefix string, like 'wp'.
-  // Match alphanumeric characters including hyphen-separated
-  // segments. It excludes underscore intentionally to prevent confusion.
-  // E.g., "custom-directive".
-  '([a-z0-9]+(?:-[a-z0-9]+)*)' +
-  // (Optional) Match '--' followed by any alphanumeric characters. It
-  // excludes underscore intentionally to prevent confusion, but it can
-  // contain multiple hyphens. E.g., "--custom-prefix--with-more-info".
-  '(?:--([a-z0-9_-]+))?$', 'i' // Case insensitive.
+// ${p} must be a prefix string, like 'wp'.
+// Match alphanumeric characters including hyphen-separated
+// segments. It excludes underscore intentionally to prevent confusion.
+// E.g., "custom-directive".
+'([a-z0-9]+(?:-[a-z0-9]+)*)' +
+// (Optional) Match '--' followed by any alphanumeric characters. It
+// excludes underscore intentionally to prevent confusion, but it can
+// contain multiple hyphens. E.g., "--custom-prefix--with-more-info".
+'(?:--([a-z0-9_-]+))?$', 'i' // Case insensitive.
 );
 
 // Regular expression for reference parsing. It can contain a namespace before
@@ -2456,12 +2445,12 @@ function toVdom(root) {
           try {
             const parsedValue = JSON.parse(value);
             value = isObject(parsedValue) ? parsedValue : value;
-          } catch { }
+          } catch {}
           if (attributeName === islandAttr) {
             island = true;
             const islandNamespace =
-              // eslint-disable-next-line no-nested-ternary
-              typeof value === 'string' ? value : typeof value?.namespace === 'string' ? value.namespace : null;
+            // eslint-disable-next-line no-nested-ternary
+            typeof value === 'string' ? value : typeof value?.namespace === 'string' ? value.namespace : null;
             namespaces.push(islandNamespace);
           } else {
             directives.push([attributeName, namespace, value]);
@@ -2473,7 +2462,7 @@ function toVdom(root) {
       props[attributeName] = attributeValue;
     }
     if (ignore && !island) {
-      return [(0, preact_module.h)(localName, {
+      return [(0,preact_module.h)(localName, {
         ...props,
         innerHTML: elementNode.innerHTML,
         __directives: {
@@ -2522,7 +2511,7 @@ function toVdom(root) {
     if (island) {
       namespaces.pop();
     }
-    return [(0, preact_module.h)(localName, props, children)];
+    return [(0,preact_module.h)(localName, props, children)];
   }
   return walk(treeWalker.currentNode);
 }
@@ -2575,7 +2564,7 @@ const init = async () => {
       const vdom = toVdom(node);
       initialVdom.set(node, vdom);
       await splitTask();
-      (0, preact_module/* hydrate */.Qv)(vdom, fragment);
+      (0,preact_module/* hydrate */.Qv)(vdom, fragment);
     }
   }
 };
