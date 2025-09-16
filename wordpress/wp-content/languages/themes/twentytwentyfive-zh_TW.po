@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Themes - Twenty Twenty-Five package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-04-15 23:08:35+0000\n"
+"PO-Revision-Date: 2025-08-06 05:43:11+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -23,6 +23,16 @@ msgstr "Twenty Twenty-Five 強調簡潔性與適應性，提供靈活的設計�
 #, gp-priority: high
 msgid "Twenty Twenty-Five"
 msgstr "Twenty Twenty-Five"
+
+#: patterns/template-home-vertical-header-blog.php
+msgctxt "Pattern title"
+msgid "Right-aligned home"
+msgstr "靠右對齊的首頁"
+
+#: patterns/template-archive-vertical-header-blog.php
+msgctxt "Pattern title"
+msgid "Right-aligned archive"
+msgstr "靠右對齊的彙整頁面"
 
 #: patterns/template-search-text-blog.php
 msgctxt "Pattern title"
@@ -744,6 +754,11 @@ msgstr "照片網站彙整頁面"
 msgctxt "Pattern title"
 msgid "News blog archive"
 msgstr "新聞網站彙整頁面"
+
+#: patterns/template-404-vertical-header-blog.php
+msgctxt "Pattern title"
+msgid "Right-aligned 404"
+msgstr "靠右對齊的 404 頁面"
 
 #: patterns/services-team-photos.php:50
 msgid "Man in hat, standing in front of a building."
