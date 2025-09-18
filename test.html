@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Test page</title>
+        <link rel="icon" type="image/png" href="image/icon.png">
+    </head>
+
+    <body>
+        <h1>Test page</h1>
+        <p>
+            write <a href="mailto:joey23.su@gmail.com?subject=test_subject&body=test_body" target="_blank">email</a> to me
+        </p>
+        <hr>
+        <p> go back to <a href="index.html">index</a></p>
+        <button id="output_button">Click me</button>
+        <input type="text" id="input_box" placeholder="Type something...">
+        <script>
+            const btn = document.getElementById('output_button');
+            const input = document.getElementById('input_box');
+
+            function handleInput() {
+                const str = input.value;
+                input.value = '';
+                setTimeout(function () {
+                    if (str == '')
+                        alert("Please type something");
+                    else
+                        alert(str);
+                }, 0);
+            }
+
+            btn.onclick = handleInput;
+            input.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter') {
+                    handleInput();
+                }
+            });
+        </script>
+    </body>
+
+</html>
