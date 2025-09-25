@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Form</title>
+        <link rel="icon" type="image/png" href="image/icon.png">
+    </head>
+
+    <body>
+        <h1> Form</h1>
+        <hr>
+        <h2> Login</h2>
+        <form action="/submit_login" method="post">
+            <label for="login-name">Name:</label>
+            <input type="text" id="login-name" name="name" required>
+            <br><br>
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" name="password" required>
+            <br><br>
+            <button type="submit">Login</button>
+        </form>
+        <hr>
+        <h2> Contact Us</h2>
+        <form action="/submit_contact" method="post">
+            <label for="select">Select your contact preference: </label>
+            <select id="select" name="select">
+                <option value="email">Email</option>
+                <option value="phone">Phone</option>
+                <option value="other">Other</option>
+            </select>
+            <br><br>
+            <label for="contact-name">Name: </label>
+            <input type="text" id="contact-name" name="name">
+            <br><br>
+            <label for="email">Email: </label>
+            <input type="email" id="email" name="email">
+            <br><br>
+            <label for="number">Phone Number: </label>
+            <input type="tel" id="number" name="number" pattern="((09|09-)[0-9]{8}|09[0-9]{2}-[0-9]{6}|(0[1-8]|\(0[1-8]\))[0-9]{7})">
+            <br><br>
+            <label for="other_contact">Other Contact Method: </label>
+            <input type="text" id="other_contact" name="other_contact">
+            <br><br>
+            <label for="message">Message: </label>
+            <textarea id="message" name="message" rows="4" cols="40"></textarea>
+            <br><br>
+            <label>Stars</label>
+            <div>
+                <label for="star1">1</label>
+                <input type="radio" id="star1" name="star" value="1">
+                <label for="star2">2</label>
+                <input type="radio" id="star2" name="star" value="2">
+                <label for="star3">3</label>
+                <input type="radio" id="star3" name="star" value="3">
+                <label for="star4">4</label>
+                <input type="radio" id="star4" name="star" value="4">
+                <label for="star5">5</label>
+                <input type="radio" id="star5" name="star" value="5">
+            </div>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+
+        <hr>
+        <p> go back to <a href="index.html">index</a></p>
+
+        <script src="submit_login.js"></script>
+        <script src="submit_contact.js"></script>
+    </body>
+
+</html>
