@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>test table</title>
+        <link rel="icon" type="image/png" href="image/icon.png">
+        <style>
+            .a {
+                font-size: 18pt;
+                text-align: left;
+                background-color: yellow;
+                width: 200px;
+            }
+
+            .b {
+                font-family: courier;
+                text-align: left;
+                background-color: red;
+                width: 200px;
+            }
+
+            .c {
+                color: blue;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+
+            .d {
+                text-align: center;
+            }
+
+            .e {
+                border-collapse: collapse;
+            }
+
+            th {
+                border: 2px solid black;
+                padding: 10px;
+            }
+
+            .container {
+                position: relative;
+                width: 100px;
+                height: 132px;
+                border: 2px solid black;
+            }
+
+            .right {
+                position: relative;
+                left: 20px;
+            }
+
+            .left {
+                position: relative;
+                right: 20px;
+            }
+
+            .text_container {
+                position: relative;
+                text-align: center;
+                font-size: 24px;
+                width: 200px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1> test table</h1>
+        <table class="e">
+            <tr>
+                <th rowspan="4" class="container">
+                    <p class="c">color: blue</p>
+                </th>
+                <th></th>
+            </tr>
+            <tr>
+                <th class="b">font-family: courier</th>
+            </tr>
+            <tr>
+                <th></th>
+            </tr>
+            <tr>
+                <th class="a">font-size : 18 pt</th>
+            </tr>
+            <tr>
+                <th colspan="2" class="d">text-align : center</th>
+            </tr>
+        </table>
+        border-collapse: collapse
+        <hr>
+        <div class="text_container">
+            <p>test normal</p>
+            <p class="left">test left 20px</p>
+            <p class="right">test right 20px</p>
+        </div>
+        <hr>
+        <p> go back to <a href="index.html">index</a></p>
+    </body>
+
+</html>
