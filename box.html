@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>box</title>
+        <link rel="icon" type="image/png" href="image/icon.png">
+        <style>
+            .box1 {
+                height: 200px;
+                width: 400px;
+                border: 5px solid red;
+            }
+
+            .box2 {
+                height: 150px;
+                width: 350px;
+                border: 5px solid yellow;
+                margin: 20px;
+            }
+
+            .button {
+                border-radius: 10px;
+                border: 3px solid navy;
+                padding: 5px 20px;
+                background: lightcyan;
+                width: 100px;
+                text-align: center;
+                font-weight: bold;
+                color: navy;
+            }
+
+            .button:hover {
+                cursor: pointer;
+                box-shadow: 3px 3px 3px gray;
+                background: linear-gradient(to bottom right, white, black);
+            }
+
+            .button:active {
+                box-shadow: none;
+                background: #8fffff;
+                transform: translate(3px, 3px);
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1> box</h1>
+        <div class="box1">
+            <div class="box2">
+            </div>
+        </div>
+        <hr>
+        <button class="button">Click</button>
+        <hr>
+        <p> go back to <a href="index.html">index</a></p>
+    </body>
+    <!-- <script>
+        document.querySelector('.button').addEventListener('click', function () { alert('Button clicked!'); });
+    </script> -->
+
+</html>
