@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>snake</title>
+        <link rel="icon" type="image/png" href="image/icon.png">
+    </head>
+
+    <body>
+        <h1> Snake Game </h1>
+        <button onclick="init()">Restart Game</button>
+        <br>
+        <br>
+        <canvas id="gameCanvas" width="600" height="400"></canvas>
+        <div id="gameOverMessage" style="margin-top: 5px; display: none;"></div>
+        <script>
+            const canvas = document.getElementById('gameCanvas');
+            const ctx = canvas.getContext('2d');
+
+            const gridSize = 20;
+            const canvasWidth = canvas.width;
+            const canvasHeight = canvas.height;
+            const cols = canvasWidth / gridSize;
+            const rows = canvasHeight / gridSize;
+
+            let snake, food, direction, score, gameInterval, gameActive;
+
+            function init() {
+                snake = [
+                    { x: 2, y: 0 },
+                    { x: 1, y: 0 },
+                    { x: 0, y: 0 }
+                ];
+                direction = 'pause';
+                score = 0;
+                gameActive = true;
+                const gameOverMessage = document.getElementById('gameOverMessage');
+                gameOverMessage.innerHTML = `<h2>Game Start</h2>Use Arrow Keys or WASD to move<br>Press any movement key to start`;
+                gameOverMessage.style.display = 'block';
+                spawnFood();
+
+                if (gameInterval) {
+                    clearInterval(gameInterval);
+                }
+                gameInterval = setInterval(gameLoop, 120);
+            }
+
+            function spawnFood() {
+                while (true) {
+                    food = {
+                        x: Math.floor(Math.random() * cols),
+                        y: Math.floor(Math.random() * rows)
+                    };
+                    let onSnake = false;
+                    for (const segment of snake) {
+                        if (segment.x === food.x && segment.y === food.y) {
+                            onSnake = true;
+                            break;
+                        }
+                    }
+                    if (!onSnake) {
+                        break;
+                    }
+                }
+            }
+
+            function draw() {
+                // Clear canvas
+                ctx.fillStyle = '#007f0f';
+                ctx.fillRect(0, 0, canvasWidth, canvasHeight);
+
+                // Draw grid
+                ctx.strokeStyle = '#7f7f7f';
+                for (let i = 0; i <= rows; i++) {
+                    ctx.beginPath();
+                    ctx.moveTo(0, i * gridSize);
+                    ctx.lineTo(canvasWidth, i * gridSize);
+                    ctx.stroke();
+                }
+                for (let i = 0; i <= cols; i++) {
+                    ctx.beginPath();
+                    ctx.moveTo(i * gridSize, 0);
+                    ctx.lineTo(i * gridSize, canvasHeight);
+                    ctx.stroke();
+                }
+
+                // Draw snake
+                ctx.fillStyle = '#00bf00';
+                snake.forEach(segment => {
+                    ctx.fillRect(segment.x * gridSize, segment.y * gridSize, gridSize, gridSize);
+                });
+                ctx.fillStyle = '#7fbf00';
+                ctx.fillRect(snake[0].x * gridSize, snake[0].y * gridSize, gridSize, gridSize);
+
+                // Draw food
+                ctx.fillStyle = '#ff0000';
+                ctx.fillRect(food.x * gridSize, food.y * gridSize, gridSize, gridSize);
+            }
+
+            function update() {
+                if (!gameActive) return;
+
+                const head = { ...snake[0] };
+
+                switch (direction) {
+                    case 'pause': return;
+                    case 'up': head.y--; break;
+                    case 'down': head.y++; break;
+                    case 'left': head.x--; break;
+                    case 'right': head.x++; break;
+                }
+
+                // Wall collision
+                if (head.x < 0 || head.x >= cols || head.y < 0 || head.y >= rows) {
+                    gameOver();
+                    return;
+                }
+
+                // Self collision
+                for (let i = 1; i < snake.length; i++) {
+                    if (head.x === snake[i].x && head.y === snake[i].y) {
+                        gameOver();
+                        return;
+                    }
+                }
+
+                snake.unshift(head);
+
+                // Food collision
+                if (head.x === food.x && head.y === food.y) {
+                    score++;
+                    spawnFood();
+                } else {
+                    snake.pop();
+                }
+            }
+
+            function gameOver() {
+                direction = 'pause';
+                gameActive = false;
+                clearInterval(gameInterval);
+                const gameOverMessage = document.getElementById('gameOverMessage');
+                gameOverMessage.innerHTML = `<h2>Game Over</h2>Score: ${score}<br>Press Enter to Restart`;
+                gameOverMessage.style.display = 'block';
+            }
+
+            function gameLoop() {
+                update();
+                draw();
+            }
+
+            document.addEventListener('keydown', e => {
+                const key = e.key;
+                if (!gameActive && key === 'Enter') {
+                    init();
+                    return;
+                }
+                if ((key === 'ArrowUp' || key.toLowerCase() === 'w') && direction !== 'down' && gameActive)
+                    direction = 'up';
+                else if ((key === 'ArrowDown' || key.toLowerCase() === 's') && direction !== 'up' && gameActive)
+                    direction = 'down';
+                else if ((key === 'ArrowLeft' || key.toLowerCase() === 'a') && direction !== 'right' && gameActive)
+                    direction = 'left';
+                else if ((key === 'ArrowRight' || key.toLowerCase() === 'd') && direction !== 'left' && gameActive)
+                    direction = 'right';
+                if (direction !== 'pause')
+                    document.getElementById('gameOverMessage').style.display = 'none';
+            });
+
+            init();
+        </script>
+        <hr>
+        <p> go back to <a href="index.html">index</a></p>
+    </body>
+
+</html>
